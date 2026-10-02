@@ -4,9 +4,9 @@
 
 ## Tentang Saya
 
-Saya web developer yang membangun aplikasi untuk kebutuhan operasional yang nyata, mulai dari perancangan basis data dan alur kerja (persetujuan, peran pengguna) sampai laporan, keamanan, dan pengujian. Di sisi server saya memakai **Laravel** dan **MySQL**, di sisi antarmuka **TypeScript**, **Tailwind CSS**, HTML, dan CSS.
+Web developer dengan fokus pada pengembangan aplikasi bisnis berbasis web, mencakup perancangan basis data, alur kerja dan hak akses pengguna, pelaporan, keamanan, serta pengujian. Sisi server saya bangun dengan **Laravel** dan **MySQL**, sedangkan antarmuka dengan **TypeScript**, **Tailwind CSS**, HTML, dan CSS.
 
-Saya memperhatikan hal-hal yang membuat aplikasi layak dipakai orang lain: validasi input, kontrol akses per peran, perlindungan data, dan tes otomatis yang dijalankan sebelum kode dirilis.
+Dalam setiap proyek, saya mengutamakan keandalan dan keamanan data: validasi input, pengendalian akses berbasis peran, pengujian otomatis sebelum rilis, serta kesiapan operasional seperti pencadangan data dan konfigurasi produksi.
 
 <p align="center">
   <img src="./naruto3-stack.svg" alt="Keahlian: PHP, Laravel, MySQL, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, Git" width="100%" />
