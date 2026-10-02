@@ -11,7 +11,7 @@ Dalam setiap proyek, saya mengutamakan keandalan dan keamanan data: validasi inp
 </p>
 
 <p align="center">
-  <img src="./t-stats.svg" alt="Statistik proyek, bahasa terbanyak, dan fokus kerja" width="100%" />
+  <img src="./u-stats.svg" alt="Statistik proyek, bahasa terbanyak, dan fokus kerja" width="100%" />
 </p>
 
 <p align="center"><img src="./t-divider.svg" alt="" width="100%" /></p>
@@ -19,7 +19,7 @@ Dalam setiap proyek, saya mengutamakan keandalan dan keamanan data: validasi inp
 ## Project
 
 <p align="center">
-  <img src="./t-kartu-keuangan.svg" alt="Sistem Keuangan Kantor: aplikasi pencatatan keuangan dengan empat peran" width="100%" />
+  <img src="./u-kartu-keuangan.svg" alt="Sistem Keuangan Kantor: aplikasi pencatatan keuangan dengan empat peran" width="100%" />
 </p>
 
 **Sistem Keuangan Kantor** adalah aplikasi produksi untuk pencatatan keuangan kantor. Repositorinya private karena memuat logika dan data operasional, tetapi garis besar rancangannya sebagai berikut.
