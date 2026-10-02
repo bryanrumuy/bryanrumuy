@@ -1,31 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="200" viewBox="0 0 900 200" role="img" aria-label="Tech stack: PHP, Laravel, MySQL, TypeScript, JavaScript, Tailwind CSS, Git">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="260" viewBox="0 0 900 260" role="img" aria-label="Jurus andalan: PHP, Laravel, MySQL, TypeScript, JavaScript, Tailwind CSS, Git">
   <defs>
-    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#00f0ff"/><stop offset="1" stop-color="#ff2bd6"/>
-    </linearGradient>
-    <filter id="g" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
+    <linearGradient id="fire" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffb347"/><stop offset="1" stop-color="#ff4d00"/></linearGradient>
   </defs>
   <style>
-    .bg { fill: #070a18; }
-    .title { font: 700 14px 'Courier New', monospace; fill: #00f0ff; letter-spacing: 5px; }
-    .chip { fill: #0e1430; stroke: url(#line); stroke-width: 1.5; animation: pulse 3s ease-in-out infinite; }
-    .lbl { font: 700 16px 'Segoe UI', Arial, sans-serif; fill: #e6ebff; text-anchor: middle; }
+    .bg { fill: #0a0a10; }
+    .title { font: 700 14px 'Courier New', monospace; fill: #ff9a3c; letter-spacing: 6px; text-anchor: middle; }
+    .scroll { fill: #15110c; stroke: url(#fire); stroke-width: 1.8; animation: glow 3s ease-in-out infinite; }
+    .nm { font: 800 17px 'Segoe UI', Arial, sans-serif; fill: #fff3e0; text-anchor: middle; }
+    .rk { font: 700 11px 'Courier New', monospace; fill: #38bdf8; letter-spacing: 2px; text-anchor: middle; }
     .fl { animation: float 4s ease-in-out infinite; }
-    @keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-7px) } }
-    @keyframes pulse { 0%,100% { stroke-opacity: .45 } 50% { stroke-opacity: 1 } }
+    @keyframes float { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-6px) } }
+    @keyframes glow { 0%,100% { stroke-opacity: .45 } 50% { stroke-opacity: 1 } }
   </style>
-  <rect class="bg" width="900" height="200" rx="18"/>
-  <text x="450" y="38" text-anchor="middle" class="title">// TECH STACK</text>
+  <rect class="bg" width="900" height="260" rx="18"/>
+  <text x="450" y="40" class="title">// GULUNGAN JURUS</text>
   <g>
-    <g class="fl" style="animation-delay:0s"><rect class="chip" x="40" y="80" width="100" height="46" rx="23"/><text class="lbl" x="90" y="109">PHP</text></g>
-    <g class="fl" style="animation-delay:.5s"><rect class="chip" x="156" y="80" width="116" height="46" rx="23" style="animation-delay:.4s"/><text class="lbl" x="214" y="109">Laravel</text></g>
-    <g class="fl" style="animation-delay:1s"><rect class="chip" x="288" y="80" width="106" height="46" rx="23" style="animation-delay:.8s"/><text class="lbl" x="341" y="109">MySQL</text></g>
-    <g class="fl" style="animation-delay:1.5s"><rect class="chip" x="410" y="80" width="140" height="46" rx="23" style="animation-delay:1.2s"/><text class="lbl" x="480" y="109">TypeScript</text></g>
-    <g class="fl" style="animation-delay:2s"><rect class="chip" x="566" y="80" width="140" height="46" rx="23" style="animation-delay:1.6s"/><text class="lbl" x="636" y="109">JavaScript</text></g>
-    <g class="fl" style="animation-delay:2.5s"><rect class="chip" x="722" y="80" width="138" height="46" rx="23" style="animation-delay:2s"/><text class="lbl" x="791" y="109">Tailwind</text></g>
-    <g class="fl" style="animation-delay:3s"><rect class="chip" x="380" y="140" width="140" height="40" rx="20" style="animation-delay:2.4s"/><text class="lbl" x="450" y="166">Git &amp; Testing</text></g>
+    <g class="fl" style="animation-delay:0s"><rect class="scroll" x="40" y="70" width="190" height="70" rx="10"/><text class="nm" x="135" y="102">PHP</text><text class="rk" x="135" y="124">RANK • JONIN</text></g>
+    <g class="fl" style="animation-delay:.4s"><rect class="scroll" x="255" y="70" width="190" height="70" rx="10" style="animation-delay:.4s"/><text class="nm" x="350" y="102">Laravel</text><text class="rk" x="350" y="124">RANK • JONIN</text></g>
+    <g class="fl" style="animation-delay:.8s"><rect class="scroll" x="470" y="70" width="190" height="70" rx="10" style="animation-delay:.8s"/><text class="nm" x="565" y="102">MySQL</text><text class="rk" x="565" y="124">RANK • CHUNIN</text></g>
+    <g class="fl" style="animation-delay:1.2s"><rect class="scroll" x="685" y="70" width="190" height="70" rx="10" style="animation-delay:1.2s"/><text class="nm" x="780" y="102">TypeScript</text><text class="rk" x="780" y="124">RANK • CHUNIN</text></g>
+    <g class="fl" style="animation-delay:1.6s"><rect class="scroll" x="150" y="156" width="190" height="70" rx="10" style="animation-delay:1.6s"/><text class="nm" x="245" y="188">JavaScript</text><text class="rk" x="245" y="210">RANK • CHUNIN</text></g>
+    <g class="fl" style="animation-delay:2s"><rect class="scroll" x="355" y="156" width="190" height="70" rx="10" style="animation-delay:2s"/><text class="nm" x="450" y="188">Tailwind CSS</text><text class="rk" x="450" y="210">RANK • CHUNIN</text></g>
+    <g class="fl" style="animation-delay:2.4s"><rect class="scroll" x="560" y="156" width="190" height="70" rx="10" style="animation-delay:2.4s"/><text class="nm" x="655" y="188">Git &amp; Testing</text><text class="rk" x="655" y="210">RANK • JONIN</text></g>
   </g>
-  <rect x="1" y="1" width="898" height="198" rx="18" fill="none" stroke="url(#line)" stroke-opacity=".4" stroke-width="2"/>
+  <rect x="1" y="1" width="898" height="258" rx="18" fill="none" stroke="url(#fire)" stroke-opacity=".45" stroke-width="2"/>
 </svg>
