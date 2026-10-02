@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300" role="img" aria-label="Bryan - Web Developer, jalan ninja kode">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07070b"/><stop offset=".6" stop-color="#140a04"/><stop offset="1" stop-color="#2a0d02"/>
+    </linearGradient>
+    <linearGradient id="fire" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffb347"><animate attributeName="stop-color" values="#ffb347;#ff7a00;#ff4d00;#ffb347" dur="5s" repeatCount="indefinite"/></stop>
+      <stop offset="1" stop-color="#ff4d00"><animate attributeName="stop-color" values="#ff4d00;#ffb347;#ff7a00;#ff4d00" dur="5s" repeatCount="indefinite"/></stop>
+    </linearGradient>
+    <radialGradient id="chakra"><stop offset="0" stop-color="#38bdf8" stop-opacity=".45"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="aura"><stop offset="0" stop-color="#ff7a00" stop-opacity=".5"/><stop offset="1" stop-color="#ff7a00" stop-opacity="0"/></radialGradient>
+    <filter id="glow" x="-30%" y="-60%" width="160%" height="220%">
+      <feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <g id="shuriken">
+      <polygon points="0,-46 11,-11 46,0 11,11 0,46 -11,11 -46,0 -11,-11" fill="#1b1b24" stroke="#c8ccd8" stroke-width="2.5" stroke-linejoin="round"/>
+      <circle r="9" fill="#07070b" stroke="#ff7a00" stroke-width="2"/>
+    </g>
+    <clipPath id="card"><rect width="900" height="300" rx="18"/></clipPath>
+  </defs>
+  <style>
+    .name { font: 900 88px 'Impact','Arial Black',sans-serif; letter-spacing: 10px; }
+    .sub  { font: 700 22px 'Courier New', monospace; fill: #ffd9a8; letter-spacing: 3px; }
+    .tag  { font: 700 13px 'Courier New', monospace; fill: #38bdf8; letter-spacing: 6px; }
+    .quote { font: italic 700 15px 'Georgia', serif; fill: #ff9a3c; letter-spacing: 2px; animation: pulse 3s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity:.55 } 50% { opacity:1 } }
+    .sw1 { animation: show 9s infinite 0s; opacity: 0 } .sw2 { animation: show 9s infinite 3s; opacity: 0 } .sw3 { animation: show 9s infinite 6s; opacity: 0 }
+    @keyframes show { 0% {opacity:0} 6%,30% {opacity:1} 36%,100% {opacity:0} }
+  </style>
+  <g clip-path="url(#card)">
+    <rect width="900" height="300" fill="url(#bg)"/>
+    <circle cx="150" cy="150" r="190" fill="url(#aura)"><animate attributeName="r" values="170;215;170" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="790" cy="90" r="170" fill="url(#chakra)"><animate attributeName="r" values="150;190;150" dur="5s" repeatCount="indefinite"/></circle>
+    <!-- aliran chakra -->
+    <g fill="none" stroke="#38bdf8" stroke-opacity=".35" stroke-width="2" stroke-dasharray="6 12">
+      <path d="M0 250 C200 190 320 300 520 240 S800 200 900 260"><animate attributeName="stroke-dashoffset" from="0" to="-72" dur="2.5s" repeatCount="indefinite"/></path>
+      <path d="M0 270 C220 220 340 310 540 260 S820 230 900 280" stroke="#ff7a00" stroke-opacity=".3"><animate attributeName="stroke-dashoffset" from="0" to="-72" dur="3.5s" repeatCount="indefinite"/></path>
+    </g>
+    <!-- shuriken -->
+    <g transform="translate(95 150)"><g><use href="#shuriken"/><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="5s" repeatCount="indefinite"/></g></g>
+    <g transform="translate(805 215) scale(.7)"><g><use href="#shuriken"/><animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="7s" repeatCount="indefinite"/></g></g>
+    <g transform="translate(770 60) scale(.4)"><g><use href="#shuriken"/><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="3s" repeatCount="indefinite"/></g></g>
+    <!-- teks -->
+    <text x="450" y="52" text-anchor="middle" class="tag">&lt; JALAN NINJA KODE /&gt;</text>
+    <text x="450" y="150" text-anchor="middle" class="name" fill="url(#fire)" filter="url(#glow)" stroke="#07070b" stroke-width="2" paint-order="stroke">BRYAN</text>
+    <g text-anchor="middle">
+      <text x="450" y="196" class="sub sw1">Web Developer</text>
+      <text x="450" y="196" class="sub sw2">Laravel &amp; TypeScript Ninja</text>
+      <text x="450" y="196" class="sub sw3">Security &amp; Testing Sensei</text>
+      <text x="450" y="248" class="quote">"Aku tidak akan menyerah. Itulah jalan ninjaku!"</text>
+    </g>
+    <!-- sudut -->
+    <g stroke="url(#fire)" stroke-width="3" fill="none">
+      <path d="M18 62V18H62"/><path d="M838 18H882V62"/><path d="M18 238V282H62"/><path d="M838 282H882V238"/>
+    </g>
+    <rect x="1" y="1" width="898" height="298" rx="18" fill="none" stroke="url(#fire)" stroke-opacity=".6" stroke-width="2"/>
+  </g>
+</svg>

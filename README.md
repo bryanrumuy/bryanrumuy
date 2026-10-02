@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./banner.svg" alt="Bryan - Web Developer" width="100%" />
+  <img src="./ninja-banner.svg" alt="Bryan - Web Developer" width="100%" />
 </p>
 
 <h3 align="center">Hai, saya Bryan 🍥 — Mahasiswa &amp; Web Developer</h3>
@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img src="./stack.svg" alt="Gulungan jurus: tech stack" width="100%" />
+  <img src="./ninja-stack.svg" alt="Gulungan jurus: tech stack" width="100%" />
 </p>
 
 ### 🔥 Misi yang sedang dijalankan
@@ -26,5 +26,5 @@
 > Tulis tes dulu, rapikan kode, dan pastikan aplikasi aman sebelum dipakai orang lain.
 
 <p align="center">
-  <img src="./footer.svg" alt="Dattebayo!" width="100%" />
+  <img src="./ninja-footer.svg" alt="Dattebayo!" width="100%" />
 </p>
