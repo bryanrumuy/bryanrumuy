@@ -1,23 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="140" viewBox="0 0 900 140" role="img" aria-label="Dattebayo - terima kasih sudah mampir">
-  <defs>
-    <linearGradient id="fire" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffb347"/><stop offset=".5" stop-color="#ff7a00"/><stop offset="1" stop-color="#ff4d00"/></linearGradient>
-    <g id="sh">
-      <polygon points="0,-46 11,-11 46,0 11,11 0,46 -11,11 -46,0 -11,-11" fill="#1b1b24" stroke="#c8ccd8" stroke-width="2.5" stroke-linejoin="round"/>
-      <circle r="9" fill="#07070b" stroke="#ff7a00" stroke-width="2"/>
-    </g>
-  </defs>
-  <style>
-    .t { font: 800 18px 'Courier New', monospace; fill: #ffd9a8; letter-spacing: 5px; text-anchor: middle; animation: glow 3s ease-in-out infinite; }
-    @keyframes glow { 0%,100% { opacity: .6 } 50% { opacity: 1 } }
-  </style>
-  <rect width="900" height="140" fill="#0a0a10" rx="18"/>
-  <path fill="url(#fire)" fill-opacity=".35" d="M0 90 Q150 50 300 90 T600 90 T900 90 V140 H0Z">
-    <animate attributeName="d" dur="6s" repeatCount="indefinite" values="M0 90 Q150 50 300 90 T600 90 T900 90 V140 H0Z;M0 90 Q150 130 300 90 T600 90 T900 90 V140 H0Z;M0 90 Q150 50 300 90 T600 90 T900 90 V140 H0Z"/>
-  </path>
-  <path fill="url(#fire)" fill-opacity=".6" d="M0 108 Q150 78 300 108 T600 108 T900 108 V140 H0Z">
-    <animate attributeName="d" dur="4s" repeatCount="indefinite" values="M0 108 Q150 78 300 108 T600 108 T900 108 V140 H0Z;M0 108 Q150 138 300 108 T600 108 T900 108 V140 H0Z;M0 108 Q150 78 300 108 T600 108 T900 108 V140 H0Z"/>
-  </path>
-  <g transform="translate(200 52) scale(.45)"><g><use href="#sh"/><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="3s" repeatCount="indefinite"/></g></g>
-  <g transform="translate(700 52) scale(.45)"><g><use href="#sh"/><animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="3s" repeatCount="indefinite"/></g></g>
-  <text x="450" y="58" class="t">DATTEBAYO!  TERIMA KASIH SUDAH MAMPIR</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 160" width="900" height="160" class="fts" role="img" aria-label="Terima kasih sudah berkunjung">
+<title>Terima kasih sudah berkunjung</title>
+<style>
+.fts{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif}
+.ftm{font-family:'Cascadia Code','Consolas','Courier New',monospace}
+.fttn{font-variant-numeric:tabular-nums}
+.ftca{animation:ftca 9s ease-in-out infinite}
+.ftcb{animation:ftca 9s ease-in-out -3s infinite}
+.ftcc{animation:ftca 9s ease-in-out -6s infinite}
+@keyframes ftca{0%,100%{stop-color:#22d3ee}33%{stop-color:#8b5cf6}66%{stop-color:#ec4899}}
+.ftau1{animation:ftau1 16s ease-in-out infinite alternate}
+.ftau2{animation:ftau2 19s ease-in-out infinite alternate}
+.ftau3{animation:ftau3 22s ease-in-out infinite alternate}
+@keyframes ftau1{from{transform:translate(0,0)}to{transform:translate(70px,24px)}}
+@keyframes ftau2{from{transform:translate(0,0)}to{transform:translate(-80px,-20px)}}
+@keyframes ftau3{from{transform:translate(0,0)}to{transform:translate(-40px,30px)}}
+.ftscan{animation:ftscan 9s linear infinite}
+.ftpt{animation:ftpt 7s ease-in-out infinite alternate}
+@keyframes ftpt{from{transform:translateY(0);opacity:.25}to{transform:translateY(-14px);opacity:.85}}
+.ftpl{animation:ftpl 4s ease-in-out infinite}
+@keyframes ftpl{0%,100%{stroke-opacity:.45}50%{stroke-opacity:1}}
+.ftfb{transform-box:fill-box;transform-origin:center}
+
+.ftw1{animation:ftmv 16s linear infinite}
+.ftw2{animation:ftmv 24s linear infinite reverse}
+.ftw3{animation:ftmv 34s linear infinite}
+@keyframes ftmv{from{transform:translateX(0)}to{transform:translateX(-900px)}}
+.ftbr{animation:ftbrt 6s ease-in-out infinite}
+.ftbr2{animation:ftbrt 6s ease-in-out -2.5s infinite}
+@keyframes ftbrt{0%,100%{transform:translateY(0);opacity:1}50%{transform:translateY(-3px);opacity:.78}}
+
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<defs>
+<linearGradient id="ftbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05060f"/><stop offset="1" stop-color="#0a0d24"/></linearGradient>
+<linearGradient id="ftgA" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="900" y2="0"><stop offset="0" stop-color="#22d3ee" class="ftca"/><stop offset=".5" stop-color="#8b5cf6" class="ftcb"/><stop offset="1" stop-color="#ec4899" class="ftcc"/></linearGradient><linearGradient id="ftgT" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee" class="ftca"/><stop offset=".5" stop-color="#8b5cf6" class="ftcb"/><stop offset="1" stop-color="#ec4899" class="ftcc"/></linearGradient>
+<linearGradient id="ftgB" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset=".55" stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899"/></linearGradient>
+<radialGradient id="fta1"><stop offset="0" stop-color="#22d3ee" stop-opacity=".42"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+<radialGradient id="fta2"><stop offset="0" stop-color="#8b5cf6" stop-opacity=".45"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+<radialGradient id="fta3"><stop offset="0" stop-color="#ec4899" stop-opacity=".36"/><stop offset="1" stop-color="#ec4899" stop-opacity="0"/></radialGradient>
+<linearGradient id="ftsc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee" stop-opacity="0"/><stop offset=".5" stop-color="#22d3ee" stop-opacity=".55"/><stop offset="1" stop-color="#ec4899" stop-opacity="0"/></linearGradient>
+<pattern id="ftdots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".8" fill="#ffffff" fill-opacity=".09"/></pattern>
+<linearGradient id="ftwg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1800" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset=".1667" stop-color="#8b5cf6"/><stop offset=".3333" stop-color="#ec4899"/><stop offset=".5" stop-color="#22d3ee"/><stop offset=".6667" stop-color="#8b5cf6"/><stop offset=".8333" stop-color="#ec4899"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+</defs>
+<rect width="900" height="160" fill="url(#ftbg)"/>
+<g class="ftau1"><ellipse cx="180" cy="56" rx="260" ry="150" fill="url(#fta1)"/></g>
+<g class="ftau2"><ellipse cx="540" cy="120" rx="300" ry="160" fill="url(#fta2)"/></g>
+<g class="ftau3"><ellipse cx="792" cy="40" rx="230" ry="140" fill="url(#fta3)"/></g>
+<rect width="900" height="160" fill="url(#ftdots)"/>
+<circle class="ftpt" cx="285" cy="67" r="1.3" fill="#8b5cf6" style="animation-duration:10s;animation-delay:-2s"/>
+<circle class="ftpt" cx="250" cy="112" r="1.3" fill="#8b5cf6" style="animation-duration:5s;animation-delay:-8s"/>
+<circle class="ftpt" cx="239" cy="125" r="1.6" fill="#22d3ee" style="animation-duration:8s;animation-delay:-2s"/>
+<circle class="ftpt" cx="877" cy="117" r="1" fill="#ec4899" style="animation-duration:6s;animation-delay:-1s"/>
+<circle class="ftpt" cx="833" cy="133" r="1.6" fill="#e8ecff" style="animation-duration:10s;animation-delay:-6s"/>
+<circle class="ftpt" cx="162" cy="131" r="1.6" fill="#ec4899" style="animation-duration:6s;animation-delay:-7s"/>
+<circle class="ftpt" cx="793" cy="100" r="2" fill="#ec4899" style="animation-duration:8s;animation-delay:-5s"/>
+<circle class="ftpt" cx="690" cy="45" r="1.6" fill="#ec4899" style="animation-duration:10s;animation-delay:-7s"/>
+<circle class="ftpt" cx="587" cy="108" r="1.3" fill="#e8ecff" style="animation-duration:10s;animation-delay:-7s"/>
+<g class="ftw1"><path d="M0 118Q75 109 150 118T300 118T450 118T600 118T750 118T900 118T1050 118T1200 118T1350 118T1500 118T1650 118T1800 118" fill="none" stroke="url(#ftwg)" stroke-width="8" stroke-opacity="0.13"/><path d="M0 118Q75 109 150 118T300 118T450 118T600 118T750 118T900 118T1050 118T1200 118T1350 118T1500 118T1650 118T1800 118" fill="none" stroke="url(#ftwg)" stroke-width="1.5" stroke-opacity="0.9"/></g>
+<g class="ftw2"><path d="M0 132Q75 125 150 132T300 132T450 132T600 132T750 132T900 132T1050 132T1200 132T1350 132T1500 132T1650 132T1800 132" fill="none" stroke="url(#ftwg)" stroke-width="8" stroke-opacity="0.08"/><path d="M0 132Q75 125 150 132T300 132T450 132T600 132T750 132T900 132T1050 132T1200 132T1350 132T1500 132T1650 132T1800 132" fill="none" stroke="url(#ftwg)" stroke-width="1.5" stroke-opacity="0.6"/></g>
+<g class="ftw3"><path d="M0 146Q56.25 140 112.5 146T225 146T337.5 146T450 146T562.5 146T675 146T787.5 146T900 146T1012.5 146T1125 146T1237.5 146T1350 146T1462.5 146T1575 146T1687.5 146T1800 146" fill="none" stroke="url(#ftwg)" stroke-width="8" stroke-opacity="0.06"/><path d="M0 146Q56.25 140 112.5 146T225 146T337.5 146T450 146T562.5 146T675 146T787.5 146T900 146T1012.5 146T1125 146T1237.5 146T1350 146T1462.5 146T1575 146T1687.5 146T1800 146" fill="none" stroke="url(#ftwg)" stroke-width="1.5" stroke-opacity="0.4"/></g>
+<g class="ftbr"><text x="450" y="66" text-anchor="middle" font-size="22" font-weight="600" fill="#e8ecff">Terima kasih sudah berkunjung</text></g>
+<g class="ftbr2"><text x="450" y="92" text-anchor="middle" font-size="13" letter-spacing="4" fill="#22d3ee">TERBUKA UNTUK KOLABORASI</text></g>
 </svg>

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./rasengan-banner.svg" alt="Bryan, Web Developer" width="100%" />
+  <img src="./hero.svg" alt="Bryan, Web Developer" width="100%" />
 </p>
 
 ## Tentang Saya
@@ -9,10 +9,10 @@ Web developer dengan fokus pada pengembangan aplikasi bisnis berbasis web, menca
 Dalam setiap proyek, saya mengutamakan keandalan dan keamanan data: validasi input, pengendalian akses berbasis peran, pengujian otomatis sebelum rilis, serta kesiapan operasional seperti pencadangan data dan konfigurasi produksi.
 
 <p align="center">
-  <img src="./naruto3-stack.svg" alt="Keahlian: PHP, Laravel, MySQL, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, Git" width="100%" />
+  <img src="./skills.svg" alt="Keahlian: PHP, Laravel, MySQL, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, Git" width="100%" />
 </p>
 
-<p align="center"><img src="./divider-chakra.svg" alt="" width="100%" /></p>
+<p align="center"><img src="./divider.svg" alt="" width="100%" /></p>
 
 ## Project
 
@@ -37,12 +37,12 @@ Dalam setiap proyek, saya mengutamakan keandalan dan keamanan data: validasi inp
 
 **[web-porto](https://github.com/bryanrumuy/web-porto)** adalah web portofolio pribadi berbasis TypeScript.
 
-<p align="center"><img src="./divider-chakra.svg" alt="" width="100%" /></p>
+<p align="center"><img src="./divider.svg" alt="" width="100%" /></p>
 
 ## Fokus Teknis
 
 <p align="center">
-  <img src="./fokus-teknis.svg" alt="Fokus teknis: keamanan aplikasi web, pengujian otomatis, operasional dan deployment" width="100%" />
+  <img src="./fokus.svg" alt="Fokus teknis: keamanan aplikasi web, pengujian otomatis, operasional dan deployment" width="100%" />
 </p>
 
 - **Keamanan aplikasi web**: pengendalian akses per peran, validasi dan sanitasi input, manajemen sesi, serta pemeriksaan kerentanan dependensi.
@@ -57,5 +57,5 @@ Dalam setiap proyek, saya mengutamakan keandalan dan keamanan data: validasi inp
 4. **Dokumentasikan keputusan** supaya aplikasi mudah dirawat orang lain.
 
 <p align="center">
-  <img src="./footer-rasengan.svg" alt="Terima kasih sudah berkunjung" width="100%" />
+  <img src="./footer.svg" alt="Terima kasih sudah berkunjung" width="100%" />
 </p>

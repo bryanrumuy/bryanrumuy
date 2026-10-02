@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 40" width="900" height="40" class="dvs" role="img" aria-label="Pemisah">
+<title>Pemisah</title>
+<style>
+.dvs{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif}
+.dvm{font-family:'Cascadia Code','Consolas','Courier New',monospace}
+.dvtn{font-variant-numeric:tabular-nums}
+.dvca{animation:dvca 9s ease-in-out infinite}
+.dvcb{animation:dvca 9s ease-in-out -3s infinite}
+.dvcc{animation:dvca 9s ease-in-out -6s infinite}
+@keyframes dvca{0%,100%{stop-color:#22d3ee}33%{stop-color:#8b5cf6}66%{stop-color:#ec4899}}
+.dvau1{animation:dvau1 16s ease-in-out infinite alternate}
+.dvau2{animation:dvau2 19s ease-in-out infinite alternate}
+.dvau3{animation:dvau3 22s ease-in-out infinite alternate}
+@keyframes dvau1{from{transform:translate(0,0)}to{transform:translate(70px,24px)}}
+@keyframes dvau2{from{transform:translate(0,0)}to{transform:translate(-80px,-20px)}}
+@keyframes dvau3{from{transform:translate(0,0)}to{transform:translate(-40px,30px)}}
+.dvscan{animation:dvscan 9s linear infinite}
+.dvpt{animation:dvpt 7s ease-in-out infinite alternate}
+@keyframes dvpt{from{transform:translateY(0);opacity:.25}to{transform:translateY(-14px);opacity:.85}}
+.dvpl{animation:dvpl 4s ease-in-out infinite}
+@keyframes dvpl{0%,100%{stroke-opacity:.45}50%{stroke-opacity:1}}
+.dvfb{transform-box:fill-box;transform-origin:center}
+
+.dvmv{animation:dvmv 5s ease-in-out infinite alternate}
+@keyframes dvmv{from{transform:translateX(0)}to{transform:translateX(760px)}}
+.dvdm{animation:dvdm 3.2s ease-in-out infinite}
+@keyframes dvdm{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
+
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<defs>
+<linearGradient id="dvbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05060f"/><stop offset="1" stop-color="#0a0d24"/></linearGradient>
+<linearGradient id="dvgA" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="900" y2="0"><stop offset="0" stop-color="#22d3ee" class="dvca"/><stop offset=".5" stop-color="#8b5cf6" class="dvcb"/><stop offset="1" stop-color="#ec4899" class="dvcc"/></linearGradient><linearGradient id="dvgT" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee" class="dvca"/><stop offset=".5" stop-color="#8b5cf6" class="dvcb"/><stop offset="1" stop-color="#ec4899" class="dvcc"/></linearGradient>
+<linearGradient id="dvgB" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset=".55" stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899"/></linearGradient>
+<radialGradient id="dva1"><stop offset="0" stop-color="#22d3ee" stop-opacity=".42"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+<radialGradient id="dva2"><stop offset="0" stop-color="#8b5cf6" stop-opacity=".45"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+<radialGradient id="dva3"><stop offset="0" stop-color="#ec4899" stop-opacity=".36"/><stop offset="1" stop-color="#ec4899" stop-opacity="0"/></radialGradient>
+<linearGradient id="dvsc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee" stop-opacity="0"/><stop offset=".5" stop-color="#22d3ee" stop-opacity=".55"/><stop offset="1" stop-color="#ec4899" stop-opacity="0"/></linearGradient>
+<pattern id="dvdots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".8" fill="#ffffff" fill-opacity=".09"/></pattern>
+<linearGradient id="dvln" gradientUnits="userSpaceOnUse" x1="40" y1="0" x2="860" y2="0"><stop offset="0" stop-color="#22d3ee" stop-opacity="0"/><stop offset=".2" stop-color="#22d3ee"/><stop offset=".5" stop-color="#8b5cf6"/><stop offset=".8" stop-color="#ec4899"/><stop offset="1" stop-color="#ec4899" stop-opacity="0"/></linearGradient>
+<radialGradient id="dvhl"><stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#22d3ee" stop-opacity=".6"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+</defs>
+<rect x="40" y="17" width="820" height="6" fill="url(#dvln)" opacity=".14"/><rect x="40" y="19" width="820" height="2" fill="url(#dvln)"/><g class="dvmv"><g transform="translate(70 20)"><circle r="11" fill="url(#dvhl)"/><circle r="2.5" fill="#ffffff"/></g></g><g transform="translate(450 20)"><g class="dvdm dvfb"><rect x="-6" y="-6" width="12" height="12" transform="rotate(45)" fill="#05060f" stroke="url(#dvgB)" stroke-width="1.6"/><rect x="-2.500" y="-2.500" width="5" height="5" transform="rotate(45)" fill="#8b5cf6"/></g></g><g transform="translate(430 20) rotate(45)"><rect x="-2" y="-2" width="4" height="4" fill="#22d3ee" fill-opacity=".7"/></g><g transform="translate(470 20) rotate(45)"><rect x="-2" y="-2" width="4" height="4" fill="#ec4899" fill-opacity=".7"/></g></svg>

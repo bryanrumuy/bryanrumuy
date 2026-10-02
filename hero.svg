@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" width="900" height="360" class="hrs" role="img" aria-label="Bryan - Web Developer">
+<title>Bryan - Web Developer</title>
+<style>
+.hrs{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif}
+.hrm{font-family:'Cascadia Code','Consolas','Courier New',monospace}
+.hrtn{font-variant-numeric:tabular-nums}
+.hrca{animation:hrca 9s ease-in-out infinite}
+.hrcb{animation:hrca 9s ease-in-out -3s infinite}
+.hrcc{animation:hrca 9s ease-in-out -6s infinite}
+@keyframes hrca{0%,100%{stop-color:#22d3ee}33%{stop-color:#8b5cf6}66%{stop-color:#ec4899}}
+.hrau1{animation:hrau1 16s ease-in-out infinite alternate}
+.hrau2{animation:hrau2 19s ease-in-out infinite alternate}
+.hrau3{animation:hrau3 22s ease-in-out infinite alternate}
+@keyframes hrau1{from{transform:translate(0,0)}to{transform:translate(70px,24px)}}
+@keyframes hrau2{from{transform:translate(0,0)}to{transform:translate(-80px,-20px)}}
+@keyframes hrau3{from{transform:translate(0,0)}to{transform:translate(-40px,30px)}}
+.hrscan{animation:hrscan 9s linear infinite}
+.hrpt{animation:hrpt 7s ease-in-out infinite alternate}
+@keyframes hrpt{from{transform:translateY(0);opacity:.25}to{transform:translateY(-14px);opacity:.85}}
+.hrpl{animation:hrpl 4s ease-in-out infinite}
+@keyframes hrpl{0%,100%{stroke-opacity:.45}50%{stroke-opacity:1}}
+.hrfb{transform-box:fill-box;transform-origin:center}
+@keyframes hrscan{from{transform:translateY(0)}to{transform:translateY(344px)}}
+.hrin1{animation:hrinl 1.1s cubic-bezier(.2,.8,.2,1) backwards}
+.hrin2{animation:hrinl 1.1s cubic-bezier(.2,.8,.2,1) .15s backwards}
+.hrin3{animation:hrinl 1.1s cubic-bezier(.2,.8,.2,1) .3s backwards}
+.hrin4{animation:hrinl 1.1s cubic-bezier(.2,.8,.2,1) .45s backwards}
+@keyframes hrinl{from{transform:translateX(-28px)}to{transform:translateX(0)}}
+.hrcur{animation:hrbl 1.1s steps(1) infinite}
+@keyframes hrbl{0%,50%{opacity:1}50.1%,100%{opacity:0}}
+.hrsp1{animation:hrrot 34s linear infinite}
+.hrsp2{animation:hrrot 24s linear infinite reverse}
+.hrsp3{animation:hrrot 17s linear infinite}
+.hrsp4{animation:hrrot 60s linear infinite reverse}
+@keyframes hrrot{to{transform:rotate(360deg)}}
+.hrod{offset-rotate:0deg;animation:hrorb 9s linear infinite}
+@keyframes hrorb{from{offset-distance:0%}to{offset-distance:100%}}
+.hrcore{animation:hrbr 5s ease-in-out infinite}
+@keyframes hrbr{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+.hrx1{opacity:1;animation:hrcy 9s linear -0.5s infinite}
+.hrx2{opacity:0;animation:hrcy 9s linear 3s infinite backwards}
+.hrx3{opacity:0;animation:hrcy 9s linear 6s infinite backwards}
+@keyframes hrcy{0%{opacity:0;transform:translateY(9px)}4%{opacity:1;transform:translateY(0)}30%{opacity:1;transform:translateY(0)}34%{opacity:0;transform:translateY(-9px)}100%{opacity:0;transform:translateY(-9px)}}
+
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<defs>
+<linearGradient id="hrbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05060f"/><stop offset="1" stop-color="#0a0d24"/></linearGradient>
+<linearGradient id="hrgA" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="900" y2="0"><stop offset="0" stop-color="#22d3ee" class="hrca"/><stop offset=".5" stop-color="#8b5cf6" class="hrcb"/><stop offset="1" stop-color="#ec4899" class="hrcc"/></linearGradient><linearGradient id="hrgT" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee" class="hrca"/><stop offset=".5" stop-color="#8b5cf6" class="hrcb"/><stop offset="1" stop-color="#ec4899" class="hrcc"/></linearGradient>
+<linearGradient id="hrgB" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset=".55" stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899"/></linearGradient>
+<radialGradient id="hra1"><stop offset="0" stop-color="#22d3ee" stop-opacity=".42"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+<radialGradient id="hra2"><stop offset="0" stop-color="#8b5cf6" stop-opacity=".45"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+<radialGradient id="hra3"><stop offset="0" stop-color="#ec4899" stop-opacity=".36"/><stop offset="1" stop-color="#ec4899" stop-opacity="0"/></radialGradient>
+<linearGradient id="hrsc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee" stop-opacity="0"/><stop offset=".5" stop-color="#22d3ee" stop-opacity=".55"/><stop offset="1" stop-color="#ec4899" stop-opacity="0"/></linearGradient>
+<pattern id="hrdots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".8" fill="#ffffff" fill-opacity=".09"/></pattern>
+<radialGradient id="hrsph" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#a5f3fc"/><stop offset=".35" stop-color="#8b5cf6"/><stop offset="1" stop-color="#0a0d24"/></radialGradient>
+<radialGradient id="hrhl"><stop offset="0" stop-color="#ffffff" stop-opacity=".9"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+<radialGradient id="hrhalo"><stop offset="0" stop-color="#8b5cf6" stop-opacity=".55"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="900" height="360" fill="url(#hrbg)"/>
+<g class="hrau1"><ellipse cx="180" cy="126" rx="260" ry="150" fill="url(#hra1)"/></g>
+<g class="hrau2"><ellipse cx="540" cy="270" rx="300" ry="160" fill="url(#hra2)"/></g>
+<g class="hrau3"><ellipse cx="792" cy="90" rx="230" ry="140" fill="url(#hra3)"/></g>
+<rect width="900" height="360" fill="url(#hrdots)"/>
+<circle class="hrpt" cx="263" cy="333" r="1.3" fill="#ec4899" style="animation-duration:9s;animation-delay:-7s"/>
+<circle class="hrpt" cx="660" cy="327" r="1" fill="#22d3ee" style="animation-duration:8s;animation-delay:-4s"/>
+<circle class="hrpt" cx="584" cy="149" r="1.3" fill="#e8ecff" style="animation-duration:9s;animation-delay:-8s"/>
+<circle class="hrpt" cx="507" cy="233" r="1.3" fill="#8b5cf6" style="animation-duration:10s;animation-delay:-2s"/>
+<circle class="hrpt" cx="555" cy="229" r="1" fill="#22d3ee" style="animation-duration:6s;animation-delay:-0s"/>
+<circle class="hrpt" cx="328" cy="45" r="1.6" fill="#e8ecff" style="animation-duration:9s;animation-delay:-6s"/>
+<circle class="hrpt" cx="751" cy="248" r="2" fill="#e8ecff" style="animation-duration:6s;animation-delay:-5s"/>
+<circle class="hrpt" cx="119" cy="48" r="1.3" fill="#e8ecff" style="animation-duration:6s;animation-delay:-4s"/>
+<circle class="hrpt" cx="708" cy="253" r="1.6" fill="#e8ecff" style="animation-duration:9s;animation-delay:-6s"/>
+<circle class="hrpt" cx="607" cy="209" r="2" fill="#8b5cf6" style="animation-duration:7s;animation-delay:-0s"/>
+<circle class="hrpt" cx="306" cy="340" r="1.3" fill="#ec4899" style="animation-duration:9s;animation-delay:-1s"/>
+<circle class="hrpt" cx="750" cy="138" r="1.6" fill="#ec4899" style="animation-duration:5s;animation-delay:-1s"/>
+<rect x="8" y="8" width="884" height="344" rx="28" fill="#ffffff" fill-opacity=".045"/>
+<rect x="8.5" y="8.5" width="883" height="343" rx="27.5" fill="none" stroke="url(#hrgA)" stroke-width="1" stroke-opacity=".8"/>
+<g class="hrscan"><rect x="16" y="8" width="868" height="1.5" fill="url(#hrsc)"/></g>
+<g class="hrin1"><text x="48" y="64" class="hrm" font-size="13" letter-spacing="4" fill="#22d3ee">// WEB DEVELOPER</text></g>
+<g class="hrin2"><text x="44" y="162" font-size="100" font-weight="800" letter-spacing="6" fill="url(#hrgT)">BRYAN</text></g>
+<g class="hrin3"><text x="48" y="198" font-size="17" fill="#e8ecff">Membangun aplikasi web yang aman,</text><text x="48" y="222" font-size="17" fill="#e8ecff">teruji, dan siap dipakai.</text></g>
+<g class="hrin4"><rect x="48.500" y="242.500" width="412" height="36" rx="11" fill="#000000" fill-opacity=".3" stroke="#ffffff" stroke-opacity=".12"/><text x="64" y="265" class="hrm" font-size="14"><tspan fill="#ec4899">$</tspan><tspan fill="#e8ecff"> laravel </tspan><tspan fill="#8b5cf6">·</tspan><tspan fill="#e8ecff"> mysql </tspan><tspan fill="#8b5cf6">·</tspan><tspan fill="#e8ecff"> typescript </tspan><tspan fill="#8b5cf6">·</tspan><tspan fill="#e8ecff"> tailwind</tspan></text><rect class="hrcur" x="408" y="252" width="8" height="16" fill="#22d3ee"/></g>
+<circle cx="48" cy="312" r="3" fill="#ec4899"/>
+<text class="hrx1" x="62" y="317" font-size="15" letter-spacing="1" fill="#94a3b8">Laravel &amp; MySQL</text>
+<text class="hrx2" x="62" y="317" font-size="15" letter-spacing="1" fill="#94a3b8">Keamanan &amp; Pengujian Otomatis</text>
+<text class="hrx3" x="62" y="317" font-size="15" letter-spacing="1" fill="#94a3b8">Terbuka untuk kolaborasi</text>
+<g transform="translate(742 180)"><circle r="120" fill="url(#hrhalo)"/><g class="hrsp4"><circle r="112" fill="none" stroke="#e8ecff" stroke-opacity=".18" stroke-dasharray="2 9"/><circle cx="112" r="3" fill="#22d3ee"/></g><g class="hrsp1"><g transform="rotate(-22)"><ellipse rx="132" ry="42" fill="none" stroke="#22d3ee" stroke-width="7" stroke-opacity=".07"/><ellipse rx="132" ry="42" fill="none" stroke="#22d3ee" stroke-width="1" stroke-opacity=".75"/><g class="hrod" style="offset-path:path('M-132 0a132 42 0 1 0 264 0a132 42 0 1 0 -264 0');animation-duration:9s;animation-delay:0s"><circle r="9" fill="url(#hrhl)"/><circle r="2.8" fill="#ffffff"/></g></g></g><g class="hrsp2"><g transform="rotate(34)"><ellipse rx="108" ry="34" fill="none" stroke="#8b5cf6" stroke-width="7" stroke-opacity=".07"/><ellipse rx="108" ry="34" fill="none" stroke="#8b5cf6" stroke-width="1" stroke-opacity=".75"/><g class="hrod" style="offset-path:path('M-108 0a108 34 0 1 0 216 0a108 34 0 1 0 -216 0');animation-duration:7s;animation-delay:-2s"><circle r="9" fill="url(#hrhl)"/><circle r="2.8" fill="#ffffff"/></g></g></g><g class="hrsp3"><g transform="rotate(92)"><ellipse rx="84" ry="26" fill="none" stroke="#ec4899" stroke-width="7" stroke-opacity=".07"/><ellipse rx="84" ry="26" fill="none" stroke="#ec4899" stroke-width="1" stroke-opacity=".75"/><g class="hrod" style="offset-path:path('M-84 0a84 26 0 1 0 168 0a84 26 0 1 0 -168 0');animation-duration:5.5s;animation-delay:-1s"><circle r="9" fill="url(#hrhl)"/><circle r="2.8" fill="#ffffff"/></g></g></g><g class="hrcore hrfb"><circle r="50" fill="none" stroke="#22d3ee" stroke-opacity=".12" stroke-width="10"/><circle r="40" fill="url(#hrsph)"/><circle r="40" fill="none" stroke="#ffffff" stroke-opacity=".25"/></g></g>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="900" height="320" class="fks" role="img" aria-label="Area fokus">
+<title>Area fokus</title>
+<style>
+.fks{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif}
+.fkm{font-family:'Cascadia Code','Consolas','Courier New',monospace}
+.fktn{font-variant-numeric:tabular-nums}
+.fkca{animation:fkca 9s ease-in-out infinite}
+.fkcb{animation:fkca 9s ease-in-out -3s infinite}
+.fkcc{animation:fkca 9s ease-in-out -6s infinite}
+@keyframes fkca{0%,100%{stop-color:#22d3ee}33%{stop-color:#8b5cf6}66%{stop-color:#ec4899}}
+.fkau1{animation:fkau1 16s ease-in-out infinite alternate}
+.fkau2{animation:fkau2 19s ease-in-out infinite alternate}
+.fkau3{animation:fkau3 22s ease-in-out infinite alternate}
+@keyframes fkau1{from{transform:translate(0,0)}to{transform:translate(70px,24px)}}
+@keyframes fkau2{from{transform:translate(0,0)}to{transform:translate(-80px,-20px)}}
+@keyframes fkau3{from{transform:translate(0,0)}to{transform:translate(-40px,30px)}}
+.fkscan{animation:fkscan 9s linear infinite}
+.fkpt{animation:fkpt 7s ease-in-out infinite alternate}
+@keyframes fkpt{from{transform:translateY(0);opacity:.25}to{transform:translateY(-14px);opacity:.85}}
+.fkpl{animation:fkpl 4s ease-in-out infinite}
+@keyframes fkpl{0%,100%{stroke-opacity:.45}50%{stroke-opacity:1}}
+.fkfb{transform-box:fill-box;transform-origin:center}
+@keyframes fkscan{from{transform:translateY(0)}to{transform:translateY(304px)}}
+.fkc{animation:fkup .9s cubic-bezier(.2,.8,.2,1) backwards}
+@keyframes fkup{from{transform:translateY(18px)}to{transform:translateY(0)}}
+.fksh{animation:fkshp 3.4s ease-in-out infinite}
+@keyframes fkshp{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+.fkfl{animation:fkfls 2.6s ease-in-out infinite alternate}
+@keyframes fkfls{from{transform:rotate(-8deg)}to{transform:rotate(8deg)}}
+.fkge{animation:fkro 14s linear infinite}
+@keyframes fkro{to{transform:rotate(360deg)}}
+
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<defs>
+<linearGradient id="fkbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05060f"/><stop offset="1" stop-color="#0a0d24"/></linearGradient>
+<linearGradient id="fkgA" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="900" y2="0"><stop offset="0" stop-color="#22d3ee" class="fkca"/><stop offset=".5" stop-color="#8b5cf6" class="fkcb"/><stop offset="1" stop-color="#ec4899" class="fkcc"/></linearGradient><linearGradient id="fkgT" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee" class="fkca"/><stop offset=".5" stop-color="#8b5cf6" class="fkcb"/><stop offset="1" stop-color="#ec4899" class="fkcc"/></linearGradient>
+<linearGradient id="fkgB" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset=".55" stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899"/></linearGradient>
+<radialGradient id="fka1"><stop offset="0" stop-color="#22d3ee" stop-opacity=".42"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+<radialGradient id="fka2"><stop offset="0" stop-color="#8b5cf6" stop-opacity=".45"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+<radialGradient id="fka3"><stop offset="0" stop-color="#ec4899" stop-opacity=".36"/><stop offset="1" stop-color="#ec4899" stop-opacity="0"/></radialGradient>
+<linearGradient id="fksc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee" stop-opacity="0"/><stop offset=".5" stop-color="#22d3ee" stop-opacity=".55"/><stop offset="1" stop-color="#ec4899" stop-opacity="0"/></linearGradient>
+<pattern id="fkdots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".8" fill="#ffffff" fill-opacity=".09"/></pattern>
+
+</defs>
+<rect width="900" height="320" fill="url(#fkbg)"/>
+<g class="fkau1"><ellipse cx="180" cy="112" rx="260" ry="150" fill="url(#fka1)"/></g>
+<g class="fkau2"><ellipse cx="540" cy="240" rx="300" ry="160" fill="url(#fka2)"/></g>
+<g class="fkau3"><ellipse cx="792" cy="80" rx="230" ry="140" fill="url(#fka3)"/></g>
+<rect width="900" height="320" fill="url(#fkdots)"/>
+<circle class="fkpt" cx="483" cy="268" r="2" fill="#8b5cf6" style="animation-duration:6s;animation-delay:-8s"/>
+<circle class="fkpt" cx="507" cy="125" r="1" fill="#e8ecff" style="animation-duration:7s;animation-delay:-2s"/>
+<circle class="fkpt" cx="112" cy="51" r="2" fill="#e8ecff" style="animation-duration:10s;animation-delay:-2s"/>
+<circle class="fkpt" cx="658" cy="37" r="1" fill="#22d3ee" style="animation-duration:5s;animation-delay:-3s"/>
+<circle class="fkpt" cx="267" cy="45" r="2" fill="#ec4899" style="animation-duration:8s;animation-delay:-3s"/>
+<circle class="fkpt" cx="551" cy="149" r="1.6" fill="#e8ecff" style="animation-duration:5s;animation-delay:-1s"/>
+<circle class="fkpt" cx="488" cy="172" r="2" fill="#22d3ee" style="animation-duration:10s;animation-delay:-4s"/>
+<circle class="fkpt" cx="342" cy="147" r="1.6" fill="#22d3ee" style="animation-duration:5s;animation-delay:-1s"/>
+<circle class="fkpt" cx="430" cy="85" r="1.6" fill="#e8ecff" style="animation-duration:5s;animation-delay:-0s"/>
+<rect x="8" y="8" width="884" height="304" rx="28" fill="#ffffff" fill-opacity=".045"/>
+<rect x="8.5" y="8.5" width="883" height="303" rx="27.5" fill="none" stroke="url(#fkgA)" stroke-width="1" stroke-opacity=".8"/>
+<g class="fkscan"><rect x="16" y="8" width="868" height="1.5" fill="url(#fksc)"/></g>
+<g class="fkc" style="animation-delay:0.10s"><rect x="28" y="28" width="270" height="264" rx="12" fill="#ffffff" fill-opacity=".05"/><rect class="fkpl" style="animation-delay:-0.0s" x="28.5" y="28.5" width="269" height="263" rx="11.5" fill="none" stroke="url(#fkgA)" stroke-opacity=".6"/><rect x="48" y="50" width="48" height="48" rx="12" fill="#22d3ee" fill-opacity=".1" stroke="#22d3ee" stroke-opacity=".4"/><g transform="translate(58 60) scale(1.167)"><g class="fksh fkfb" fill="none" stroke="#22d3ee" stroke-width="1.46" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.500L20 6v6c0 4.500-3.500 8-8 9.500C7.500 20 4 16.500 4 12V6z"/><path d="M8.500 12l2.500 2.500 4.500-5"/></g></g><text x="48" y="130" font-size="16.5" font-weight="700" fill="#e8ecff">Keamanan Aplikasi Web</text><rect x="48" y="142" width="40" height="2" rx="1" fill="#22d3ee" fill-opacity=".8"/><circle cx="52" cy="174" r="2.5" fill="#22d3ee"/><text x="66" y="178" font-size="13.5" fill="#94a3b8">Kontrol akses per peran</text><circle cx="52" cy="208" r="2.5" fill="#22d3ee"/><text x="66" y="212" font-size="13.5" fill="#94a3b8">Validasi input</text><circle cx="52" cy="242" r="2.5" fill="#22d3ee"/><text x="66" y="246" font-size="13.5" fill="#94a3b8">Manajemen sesi</text><circle cx="52" cy="276" r="2.5" fill="#22d3ee"/><text x="66" y="280" font-size="13.5" fill="#94a3b8">Audit dependensi</text></g>
+<g class="fkc" style="animation-delay:0.25s"><rect x="315" y="28" width="270" height="264" rx="12" fill="#ffffff" fill-opacity=".05"/><rect class="fkpl" style="animation-delay:-1.3s" x="315.5" y="28.5" width="269" height="263" rx="11.5" fill="none" stroke="url(#fkgA)" stroke-opacity=".6"/><rect x="335" y="50" width="48" height="48" rx="12" fill="#8b5cf6" fill-opacity=".1" stroke="#8b5cf6" stroke-opacity=".4"/><g transform="translate(345 60) scale(1.167)"><g class="fkfl fkfb" fill="none" stroke="#8b5cf6" stroke-width="1.46" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3h5M10.5 3v6L5 19a1.6 1.6 0 0 0 1.4 2.3h11.2A1.6 1.6 0 0 0 19 19l-5.500-10V3"/><path d="M7.600 15h8.800"/></g></g><text x="335" y="130" font-size="16.5" font-weight="700" fill="#e8ecff">Pengujian Otomatis</text><rect x="335" y="142" width="40" height="2" rx="1" fill="#8b5cf6" fill-opacity=".8"/><circle cx="339" cy="174" r="2.5" fill="#8b5cf6"/><text x="353" y="178" font-size="13.5" fill="#94a3b8">Tes fitur</text><circle cx="339" cy="208" r="2.5" fill="#8b5cf6"/><text x="353" y="212" font-size="13.5" fill="#94a3b8">Tes hak akses per peran</text><circle cx="339" cy="242" r="2.5" fill="#8b5cf6"/><text x="353" y="246" font-size="13.5" fill="#94a3b8">Tes keamanan sebelum rilis</text></g>
+<g class="fkc" style="animation-delay:0.40s"><rect x="602" y="28" width="270" height="264" rx="12" fill="#ffffff" fill-opacity=".05"/><rect class="fkpl" style="animation-delay:-2.6s" x="602.5" y="28.5" width="269" height="263" rx="11.5" fill="none" stroke="url(#fkgA)" stroke-opacity=".6"/><rect x="622" y="50" width="48" height="48" rx="12" fill="#ec4899" fill-opacity=".1" stroke="#ec4899" stroke-opacity=".4"/><g transform="translate(632 60) scale(1.167)"><g class="fkge fkfb" fill="none" stroke="#ec4899" stroke-width="1.46" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5.500"/><circle cx="12" cy="12" r="2"/><path d="M19.20 12.00L22.00 12.00M17.09 17.09L19.07 19.07M12.00 19.20L12.00 22.00M6.91 17.09L4.93 19.07M4.80 12.00L2.00 12.00M6.91 6.91L4.93 4.93M12.00 4.80L12.00 2.00M17.09 6.91L19.07 4.93"/></g></g><text x="622" y="130" font-size="16.5" font-weight="700" fill="#e8ecff">Operasional &amp; Deployment</text><rect x="622" y="142" width="40" height="2" rx="1" fill="#ec4899" fill-opacity=".8"/><circle cx="626" cy="174" r="2.5" fill="#ec4899"/><text x="640" y="178" font-size="13.5" fill="#94a3b8">Konfigurasi produksi</text><circle cx="626" cy="208" r="2.5" fill="#ec4899"/><text x="640" y="212" font-size="13.5" fill="#94a3b8">Backup terenkripsi</text><circle cx="626" cy="242" r="2.5" fill="#ec4899"/><text x="640" y="246" font-size="13.5" fill="#94a3b8">Pemantauan server</text></g>
+</svg>
