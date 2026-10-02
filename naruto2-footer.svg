@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="150" viewBox="0 0 900 150" role="img" aria-label="Terima kasih sudah berkunjung. Terbuka untuk kolaborasi">
+<title>Terima kasih sudah berkunjung. Terbuka untuk kolaborasi</title>
+<defs>
+<linearGradient id="ft-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e0b08"/><stop offset="1" stop-color="#07070b"/></linearGradient>
+<linearGradient id="ft-fire" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd27a"/><stop offset=".5" stop-color="#ff7a00"/><stop offset="1" stop-color="#ff4d00"/></linearGradient>
+<linearGradient id="ft-w1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff4d00"/><stop offset="1" stop-color="#7a1f00"/></linearGradient>
+<linearGradient id="ft-w2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff7a00"/><stop offset="1" stop-color="#b33a00"/></linearGradient>
+<linearGradient id="ft-w3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb347"/><stop offset="1" stop-color="#ff7a00"/></linearGradient>
+<clipPath id="ft-box"><rect width="900" height="150" rx="20"/></clipPath></defs>
+<style>
+text{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif}.mono{font-family:'Courier New',monospace}
+.in{animation:enter 1s cubic-bezier(.22,1,.36,1) both;animation-delay:var(--d,0s)}
+@keyframes enter{from{transform:translateY(12px)}to{transform:translateY(0)}}
+.breathe{animation:breathe 4.5s ease-in-out infinite alternate}
+@keyframes breathe{from{opacity:.8}to{opacity:1}}
+.breathe2{animation:breathe 4.5s ease-in-out infinite alternate;animation-delay:-2s}
+.w1{animation:wv 9s linear infinite}.w2{animation:wv2 6s linear infinite}.w3{animation:wv3 4s linear infinite}
+@keyframes wv{to{transform:translateX(-300px)}}@keyframes wv2{to{transform:translateX(-450px)}}@keyframes wv3{to{transform:translateX(-225px)}}
+.sa{animation:spin 6s linear infinite}.sb{animation:spin 9s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.ring{animation:spin 20s linear infinite reverse}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}</style>
+<g clip-path="url(#ft-box)"><rect width="900" height="150" fill="url(#ft-bg)"/>
+<path class="w1" d="M0,122 Q75.0,113 150.0,122 T300.0,122 T450.0,122 T600.0,122 T750.0,122 T900.0,122 T1050.0,122 T1200.0,122 T1350.0,122 T1500.0,122 T1650.0,122 T1800.0,122 T1950.0,122 T2100.0,122 V160 H0 Z" fill="url(#ft-w1)" fill-opacity="0.75"/><path class="w2" d="M0,128 Q112.5,117 225.0,128 T450.0,128 T675.0,128 T900.0,128 T1125.0,128 T1350.0,128 T1575.0,128 T1800.0,128 T2025.0,128 T2250.0,128 V160 H0 Z" fill="url(#ft-w2)" fill-opacity="0.75"/><path class="w3" d="M0,136 Q56.2,129 112.5,136 T225.0,136 T337.5,136 T450.0,136 T562.5,136 T675.0,136 T787.5,136 T900.0,136 T1012.5,136 T1125.0,136 T1237.5,136 T1350.0,136 T1462.5,136 T1575.0,136 T1687.5,136 T1800.0,136 T1912.5,136 T2025.0,136 V160 H0 Z" fill="url(#ft-w3)" fill-opacity="0.85"/>
+<g class="in" style="--d:.6s"><g transform="translate(80,56)"><g class="ring"><circle r="40" fill="none" stroke="#38bdf8" stroke-opacity=".5" stroke-width="1.3" stroke-dasharray="4 8"/></g></g><g transform="translate(80,56) scale(1.15)" opacity="1"><g class="sa"><path d="M0,-26 L6,-6 L26,0 L6,6 L0,26 L-6,6 L-26,0 L-6,-6 Z" fill="url(#ft-fire)" stroke="#fff3e0" stroke-opacity=".5" stroke-width="1" stroke-linejoin="round"/><circle r="4" fill="#07070b" stroke="#38bdf8" stroke-width="1.2"/></g></g></g>
+<g class="in" style="--d:.6s"><g transform="translate(820,56)"><g class="ring"><circle r="40" fill="none" stroke="#38bdf8" stroke-opacity=".5" stroke-width="1.3" stroke-dasharray="4 8"/></g></g><g transform="translate(820,56) scale(1.0)" opacity="1"><g class="sb"><path d="M0,-26 L6,-6 L26,0 L6,6 L0,26 L-6,6 L-26,0 L-6,-6 Z" fill="url(#ft-fire)" stroke="#fff3e0" stroke-opacity=".5" stroke-width="1" stroke-linejoin="round"/><circle r="4" fill="#07070b" stroke="#38bdf8" stroke-width="1.2"/></g></g></g>
+<g class="in" style="--d:.15s"><g class="breathe"><text x="450" y="64" text-anchor="middle" font-size="30" font-weight="700" fill="#fff3e0">Terima kasih sudah berkunjung</text></g><g class="breathe2"><text class="mono" x="450" y="92" text-anchor="middle" font-size="15" letter-spacing="3" fill="#ffb347">Terbuka untuk kolaborasi</text></g></g>
+<rect x=".5" y=".5" width="899" height="149" rx="19.5" fill="none" stroke="#ff7a00" stroke-opacity=".25"/></g>
+</svg>

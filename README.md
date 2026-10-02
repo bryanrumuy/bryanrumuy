@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./naruto-banner.svg" alt="Bryan, Web Developer" width="100%" />
+  <img src="./naruto2-banner.svg" alt="Bryan, Web Developer" width="100%" />
 </p>
 
 ## Tentang Saya
@@ -9,7 +9,7 @@ Saya web developer yang membangun aplikasi untuk kebutuhan operasional yang nyat
 Saya memperhatikan hal-hal yang membuat aplikasi layak dipakai orang lain: validasi input, kontrol akses per peran, perlindungan data, dan tes otomatis yang dijalankan sebelum kode dirilis.
 
 <p align="center">
-  <img src="./naruto-stack.svg" alt="Keahlian: PHP, Laravel, MySQL, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, Git" width="100%" />
+  <img src="./naruto2-stack.svg" alt="Keahlian: PHP, Laravel, MySQL, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, Git" width="100%" />
 </p>
 
 ## Project
@@ -32,5 +32,5 @@ Web portofolio pribadi.
 - **Operasional dan deployment**: konfigurasi produksi, backup terenkripsi, dan pemantauan pada server terkelola
 
 <p align="center">
-  <img src="./naruto-footer.svg" alt="Terima kasih sudah berkunjung" width="100%" />
+  <img src="./naruto2-footer.svg" alt="Terima kasih sudah berkunjung" width="100%" />
 </p>
