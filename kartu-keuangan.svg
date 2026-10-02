@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="900" height="320" class="kcs" role="img" aria-label="Proyek Sistem Keuangan Kantor">
+<title>Proyek Sistem Keuangan Kantor</title>
+<style>
+.kcs{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif}
+.kcm{font-family:'Cascadia Code','Consolas','Courier New',monospace}
+.kctn{font-variant-numeric:tabular-nums}
+.kcca{animation:kcca 9s ease-in-out infinite}
+.kccb{animation:kcca 9s ease-in-out -3s infinite}
+.kccc{animation:kcca 9s ease-in-out -6s infinite}
+@keyframes kcca{0%,100%{stop-color:#22d3ee}33%{stop-color:#8b5cf6}66%{stop-color:#ec4899}}
+.kcau1{animation:kcau1 16s ease-in-out infinite alternate}
+.kcau2{animation:kcau2 19s ease-in-out infinite alternate}
+.kcau3{animation:kcau3 22s ease-in-out infinite alternate}
+@keyframes kcau1{from{transform:translate(0,0)}to{transform:translate(70px,24px)}}
+@keyframes kcau2{from{transform:translate(0,0)}to{transform:translate(-80px,-20px)}}
+@keyframes kcau3{from{transform:translate(0,0)}to{transform:translate(-40px,30px)}}
+.kcscan{animation:kcscan 9s linear infinite}
+.kcpt{animation:kcpt 7s ease-in-out infinite alternate}
+@keyframes kcpt{from{transform:translateY(0);opacity:.25}to{transform:translateY(-14px);opacity:.85}}
+.kcpl{animation:kcpl 4s ease-in-out infinite}
+@keyframes kcpl{0%,100%{stroke-opacity:.45}50%{stroke-opacity:1}}
+.kcfb{transform-box:fill-box;transform-origin:center}
+@keyframes kcscan{from{transform:translateY(0)}to{transform:translateY(304px)}}
+.kcin{animation:kcinl 1s cubic-bezier(.2,.8,.2,1) backwards}
+@keyframes kcinl{from{transform:translateX(-24px)}to{transform:translateX(0)}}
+.kcb{transform-box:fill-box;transform-origin:center bottom;animation:kcbar 3.6s ease-in-out infinite alternate}
+@keyframes kcbar{from{transform:scaleY(.62)}to{transform:scaleY(1)}}
+.kctr{stroke-dasharray:10 7;animation:kcfl 2.4s linear infinite}
+@keyframes kcfl{to{stroke-dashoffset:-34}}
+.kcdn{transform-box:fill-box;transform-origin:center;animation:kcrot 22s linear infinite}
+@keyframes kcrot{to{transform:rotate(360deg)}}
+
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<defs>
+<linearGradient id="kcbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05060f"/><stop offset="1" stop-color="#0a0d24"/></linearGradient>
+<linearGradient id="kcgA" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="900" y2="0"><stop offset="0" stop-color="#22d3ee" class="kcca"/><stop offset=".5" stop-color="#8b5cf6" class="kccb"/><stop offset="1" stop-color="#ec4899" class="kccc"/></linearGradient><linearGradient id="kcgT" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee" class="kcca"/><stop offset=".5" stop-color="#8b5cf6" class="kccb"/><stop offset="1" stop-color="#ec4899" class="kccc"/></linearGradient>
+<linearGradient id="kcgB" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset=".55" stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899"/></linearGradient>
+<radialGradient id="kca1"><stop offset="0" stop-color="#22d3ee" stop-opacity=".42"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+<radialGradient id="kca2"><stop offset="0" stop-color="#8b5cf6" stop-opacity=".45"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+<radialGradient id="kca3"><stop offset="0" stop-color="#ec4899" stop-opacity=".36"/><stop offset="1" stop-color="#ec4899" stop-opacity="0"/></radialGradient>
+<linearGradient id="kcsc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee" stop-opacity="0"/><stop offset=".5" stop-color="#22d3ee" stop-opacity=".55"/><stop offset="1" stop-color="#ec4899" stop-opacity="0"/></linearGradient>
+<pattern id="kcdots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".8" fill="#ffffff" fill-opacity=".09"/></pattern>
+
+</defs>
+<rect width="900" height="320" fill="url(#kcbg)"/>
+<g class="kcau1"><ellipse cx="180" cy="112" rx="260" ry="150" fill="url(#kca1)"/></g>
+<g class="kcau2"><ellipse cx="540" cy="240" rx="300" ry="160" fill="url(#kca2)"/></g>
+<g class="kcau3"><ellipse cx="792" cy="80" rx="230" ry="140" fill="url(#kca3)"/></g>
+<rect width="900" height="320" fill="url(#kcdots)"/>
+<circle class="kcpt" cx="351" cy="107" r="2" fill="#22d3ee" style="animation-duration:5s;animation-delay:-8s"/>
+<circle class="kcpt" cx="116" cy="217" r="1" fill="#8b5cf6" style="animation-duration:5s;animation-delay:-1s"/>
+<circle class="kcpt" cx="464" cy="244" r="1" fill="#8b5cf6" style="animation-duration:5s;animation-delay:-8s"/>
+<circle class="kcpt" cx="454" cy="60" r="1" fill="#8b5cf6" style="animation-duration:10s;animation-delay:-0s"/>
+<circle class="kcpt" cx="610" cy="233" r="1" fill="#8b5cf6" style="animation-duration:5s;animation-delay:-8s"/>
+<circle class="kcpt" cx="156" cy="178" r="2" fill="#8b5cf6" style="animation-duration:9s;animation-delay:-1s"/>
+<circle class="kcpt" cx="604" cy="187" r="1.3" fill="#22d3ee" style="animation-duration:9s;animation-delay:-3s"/>
+<circle class="kcpt" cx="401" cy="79" r="1" fill="#22d3ee" style="animation-duration:9s;animation-delay:-3s"/>
+<circle class="kcpt" cx="528" cy="248" r="1.6" fill="#e8ecff" style="animation-duration:9s;animation-delay:-7s"/>
+<rect x="8" y="8" width="884" height="304" rx="28" fill="#ffffff" fill-opacity=".045"/>
+<rect x="8.5" y="8.5" width="883" height="303" rx="27.5" fill="none" stroke="url(#kcgA)" stroke-width="1" stroke-opacity=".8"/>
+<g class="kcscan"><rect x="16" y="8" width="868" height="1.5" fill="url(#kcsc)"/></g>
+<g class="kcin" style="animation-delay:.05s"><rect x="44" y="32" width="198" height="24" rx="12" fill="#22d3ee" fill-opacity=".1" stroke="#22d3ee" stroke-opacity=".45"/><text x="57" y="48" class="kcm" font-size="11" letter-spacing="3" fill="#22d3ee">PRODUKSI · PRIVATE</text></g>
+<g class="kcin" style="animation-delay:.15s"><text x="44" y="98" font-size="32" font-weight="800" fill="url(#kcgT)">Sistem Keuangan Kantor</text><text x="44" y="124" font-size="14" fill="#94a3b8">Aplikasi pencatatan keuangan kantor dengan empat peran:</text><text x="44" y="144" font-size="14" fill="#94a3b8">admin, finance, staf, pimpinan.</text></g>
+<g class="kcin" style="animation-delay:0.25s"><g transform="translate(44 164) scale(0.833)"><g class="" fill="none" stroke="#22d3ee" stroke-width="2.04" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.3l2.8 2.8L16.3 9.3"/></g></g><text x="74" y="179" font-size="13.5" fill="#e8ecff">Persetujuan transaksi &amp; nomor referensi otomatis</text></g>
+<g class="kcin" style="animation-delay:0.35s"><g transform="translate(44 191) scale(0.833)"><g class="" fill="none" stroke="#8b5cf6" stroke-width="2.04" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5M9 13h7M9 17h7"/></g></g><text x="74" y="206" font-size="13.5" fill="#e8ecff">Laporan PDF/Excel dengan rumus asli &amp; bukti kas siap cetak</text></g>
+<g class="kcin" style="animation-delay:0.45s"><g transform="translate(44 218) scale(0.833)"><g class="" fill="none" stroke="#22d3ee" stroke-width="2.04" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></g></g><text x="74" y="233" font-size="13.5" fill="#e8ecff">Akses per peran, bukti privat, password sementara</text></g>
+<g class="kcin" style="animation-delay:0.55s"><g transform="translate(44 245) scale(0.833)"><g class="" fill="none" stroke="#8b5cf6" stroke-width="2.04" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3h5M10.5 3v6L5 19a1.6 1.6 0 0 0 1.4 2.3h11.2A1.6 1.6 0 0 0 19 19l-5.500-10V3"/><path d="M7.600 15h8.800"/></g></g><text x="74" y="260" font-size="13.5" fill="#e8ecff">500+ tes otomatis (SQLite &amp; MySQL)</text></g>
+<g class="kcin" style="animation-delay:.7s"><rect x="44" y="276" width="95" height="24" rx="12" fill="#ffffff" fill-opacity=".06" stroke="url(#kcgA)" stroke-opacity=".55"/><text x="91.5" y="292" text-anchor="middle" font-size="12" font-weight="600" fill="#e8ecff">Laravel 12</text><rect x="149" y="276" width="60" height="24" rx="12" fill="#ffffff" fill-opacity=".06" stroke="url(#kcgA)" stroke-opacity=".55"/><text x="179.0" y="292" text-anchor="middle" font-size="12" font-weight="600" fill="#e8ecff">MySQL</text><rect x="219" y="276" width="108" height="24" rx="12" fill="#ffffff" fill-opacity=".06" stroke="url(#kcgA)" stroke-opacity=".55"/><text x="273.0" y="292" text-anchor="middle" font-size="12" font-weight="600" fill="#e8ecff">Tailwind CSS</text><rect x="337" y="276" width="88" height="24" rx="12" fill="#ffffff" fill-opacity=".06" stroke="url(#kcgA)" stroke-opacity=".55"/><text x="381.0" y="292" text-anchor="middle" font-size="12" font-weight="600" fill="#e8ecff">Alpine.js</text></g>
+<rect x="626" y="38" width="240" height="236" rx="18" fill="#000000" fill-opacity=".28" stroke="#ffffff" stroke-opacity=".12"/><circle cx="646" cy="58" r="3.5" fill="#ec4899" fill-opacity=".8"/><circle cx="660" cy="58" r="3.5" fill="#f59e0b" fill-opacity=".8"/><circle cx="674" cy="58" r="3.5" fill="#22c55e" fill-opacity=".8"/><rect x="726" y="54" width="120" height="8" rx="4" fill="#ffffff" fill-opacity=".08"/><rect x="646" y="86" width="84" height="8" rx="4" fill="#ffffff" fill-opacity=".16"/><rect x="646" y="102" width="56" height="6" rx="3" fill="#ffffff" fill-opacity=".08"/><g class="kcdn"><circle cx="826" cy="98" r="15" fill="none" stroke="#ffffff" stroke-opacity=".1" stroke-width="5"/><circle cx="826" cy="98" r="15" fill="none" stroke="url(#kcgB)" stroke-width="5" stroke-linecap="round" stroke-dasharray="60 40"/></g><rect class="kcb" style="animation-delay:-0.00s;animation-duration:3.0s" x="650" y="204" width="16" height="46" rx="4" fill="url(#kcgB)" fill-opacity=".75"/><rect class="kcb" style="animation-delay:-0.55s;animation-duration:3.7s" x="675" y="180" width="16" height="70" rx="4" fill="url(#kcgB)" fill-opacity=".75"/><rect class="kcb" style="animation-delay:-1.10s;animation-duration:4.4s" x="700" y="196" width="16" height="54" rx="4" fill="url(#kcgB)" fill-opacity=".75"/><rect class="kcb" style="animation-delay:-1.65s;animation-duration:3.0s" x="725" y="158" width="16" height="92" rx="4" fill="url(#kcgB)" fill-opacity=".75"/><rect class="kcb" style="animation-delay:-2.20s;animation-duration:3.7s" x="750" y="186" width="16" height="64" rx="4" fill="url(#kcgB)" fill-opacity=".75"/><rect class="kcb" style="animation-delay:-2.75s;animation-duration:4.4s" x="775" y="146" width="16" height="104" rx="4" fill="url(#kcgB)" fill-opacity=".75"/><rect class="kcb" style="animation-delay:-3.30s;animation-duration:3.0s" x="800" y="172" width="16" height="78" rx="4" fill="url(#kcgB)" fill-opacity=".75"/><rect class="kcb" style="animation-delay:-3.85s;animation-duration:3.7s" x="825" y="152" width="16" height="98" rx="4" fill="url(#kcgB)" fill-opacity=".75"/><path d="M658 190 L683 166 L708 182 L733 144 L758 172 L783 132 L808 158 L833 138" fill="none" stroke="#ffffff" stroke-opacity=".08" stroke-width="6" stroke-linejoin="round"/><path class="kctr" d="M658 190 L683 166 L708 182 L733 144 L758 172 L783 132 L808 158 L833 138" fill="none" stroke="url(#kcgB)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="833" cy="138" r="3.5" fill="#ffffff"/></svg>

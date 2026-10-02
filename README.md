@@ -17,7 +17,7 @@ Dalam setiap proyek, saya mengutamakan keandalan dan keamanan data: validasi inp
 ## Project
 
 <p align="center">
-  <img src="./project-keuangan.svg" alt="Sistem Keuangan Kantor: aplikasi pencatatan keuangan dengan empat peran" width="100%" />
+  <img src="./kartu-keuangan.svg" alt="Sistem Keuangan Kantor: aplikasi pencatatan keuangan dengan empat peran" width="100%" />
 </p>
 
 **Sistem Keuangan Kantor** adalah aplikasi produksi untuk pencatatan keuangan kantor. Repositorinya private karena memuat logika dan data operasional, tetapi garis besar rancangannya sebagai berikut.
@@ -32,7 +32,7 @@ Dalam setiap proyek, saya mengutamakan keandalan dan keamanan data: validasi inp
 | **Kesiapan operasional** | Backup terenkripsi terjadwal beserta pemantauannya, serta konfigurasi produksi yang dipisahkan dari kode (berkas `.env` tidak ikut repositori). |
 
 <p align="center">
-  <img src="./project-porto.svg" alt="web-porto: web portofolio pribadi berbasis TypeScript" width="100%" />
+  <img src="./kartu-porto.svg" alt="web-porto: web portofolio pribadi berbasis TypeScript" width="100%" />
 </p>
 
 **[web-porto](https://github.com/bryanrumuy/web-porto)** adalah web portofolio pribadi berbasis TypeScript.

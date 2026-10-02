@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 180" width="900" height="180" class="pps" role="img" aria-label="Proyek web-porto">
+<title>Proyek web-porto</title>
+<style>
+.pps{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif}
+.ppm{font-family:'Cascadia Code','Consolas','Courier New',monospace}
+.pptn{font-variant-numeric:tabular-nums}
+.ppca{animation:ppca 9s ease-in-out infinite}
+.ppcb{animation:ppca 9s ease-in-out -3s infinite}
+.ppcc{animation:ppca 9s ease-in-out -6s infinite}
+@keyframes ppca{0%,100%{stop-color:#22d3ee}33%{stop-color:#8b5cf6}66%{stop-color:#ec4899}}
+.ppau1{animation:ppau1 16s ease-in-out infinite alternate}
+.ppau2{animation:ppau2 19s ease-in-out infinite alternate}
+.ppau3{animation:ppau3 22s ease-in-out infinite alternate}
+@keyframes ppau1{from{transform:translate(0,0)}to{transform:translate(70px,24px)}}
+@keyframes ppau2{from{transform:translate(0,0)}to{transform:translate(-80px,-20px)}}
+@keyframes ppau3{from{transform:translate(0,0)}to{transform:translate(-40px,30px)}}
+.ppscan{animation:ppscan 9s linear infinite}
+.pppt{animation:pppt 7s ease-in-out infinite alternate}
+@keyframes pppt{from{transform:translateY(0);opacity:.25}to{transform:translateY(-14px);opacity:.85}}
+.pppl{animation:pppl 4s ease-in-out infinite}
+@keyframes pppl{0%,100%{stroke-opacity:.45}50%{stroke-opacity:1}}
+.ppfb{transform-box:fill-box;transform-origin:center}
+@keyframes ppscan{from{transform:translateY(0)}to{transform:translateY(164px)}}
+.ppin{animation:ppinl 1s cubic-bezier(.2,.8,.2,1) backwards}
+@keyframes ppinl{from{transform:translateX(-24px)}to{transform:translateX(0)}}
+.ppk{animation:ppkb 4s ease-in-out infinite}
+@keyframes ppkb{0%,100%{fill-opacity:.07}50%{fill-opacity:.2}}
+.ppcu{animation:ppcm 6s ease-in-out infinite alternate}
+@keyframes ppcm{from{transform:translate(0,0)}to{transform:translate(54px,18px)}}
+
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<defs>
+<linearGradient id="ppbg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#05060f"/><stop offset="1" stop-color="#0a0d24"/></linearGradient>
+<linearGradient id="ppgA" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="900" y2="0"><stop offset="0" stop-color="#22d3ee" class="ppca"/><stop offset=".5" stop-color="#8b5cf6" class="ppcb"/><stop offset="1" stop-color="#ec4899" class="ppcc"/></linearGradient><linearGradient id="ppgT" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee" class="ppca"/><stop offset=".5" stop-color="#8b5cf6" class="ppcb"/><stop offset="1" stop-color="#ec4899" class="ppcc"/></linearGradient>
+<linearGradient id="ppgB" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset=".55" stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899"/></linearGradient>
+<radialGradient id="ppa1"><stop offset="0" stop-color="#22d3ee" stop-opacity=".42"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+<radialGradient id="ppa2"><stop offset="0" stop-color="#8b5cf6" stop-opacity=".45"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+<radialGradient id="ppa3"><stop offset="0" stop-color="#ec4899" stop-opacity=".36"/><stop offset="1" stop-color="#ec4899" stop-opacity="0"/></radialGradient>
+<linearGradient id="ppsc" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee" stop-opacity="0"/><stop offset=".5" stop-color="#22d3ee" stop-opacity=".55"/><stop offset="1" stop-color="#ec4899" stop-opacity="0"/></linearGradient>
+<pattern id="ppdots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".8" fill="#ffffff" fill-opacity=".09"/></pattern>
+
+</defs>
+<rect width="900" height="180" fill="url(#ppbg)"/>
+<g class="ppau1"><ellipse cx="180" cy="63" rx="260" ry="150" fill="url(#ppa1)"/></g>
+<g class="ppau2"><ellipse cx="540" cy="135" rx="300" ry="160" fill="url(#ppa2)"/></g>
+<g class="ppau3"><ellipse cx="792" cy="45" rx="230" ry="140" fill="url(#ppa3)"/></g>
+<rect width="900" height="180" fill="url(#ppdots)"/>
+<circle class="pppt" cx="494" cy="125" r="1.6" fill="#8b5cf6" style="animation-duration:6s;animation-delay:-0s"/>
+<circle class="pppt" cx="366" cy="158" r="2" fill="#22d3ee" style="animation-duration:7s;animation-delay:-8s"/>
+<circle class="pppt" cx="651" cy="40" r="2" fill="#8b5cf6" style="animation-duration:10s;animation-delay:-7s"/>
+<circle class="pppt" cx="762" cy="138" r="1.3" fill="#8b5cf6" style="animation-duration:6s;animation-delay:-0s"/>
+<circle class="pppt" cx="133" cy="63" r="1" fill="#e8ecff" style="animation-duration:10s;animation-delay:-1s"/>
+<circle class="pppt" cx="318" cy="82" r="1.3" fill="#e8ecff" style="animation-duration:5s;animation-delay:-4s"/>
+<circle class="pppt" cx="234" cy="131" r="1.6" fill="#ec4899" style="animation-duration:5s;animation-delay:-3s"/>
+<rect x="8" y="8" width="884" height="164" rx="28" fill="#ffffff" fill-opacity=".045"/>
+<rect x="8.5" y="8.5" width="883" height="163" rx="27.5" fill="none" stroke="url(#ppgA)" stroke-width="1" stroke-opacity=".8"/>
+<g class="ppscan"><rect x="16" y="8" width="868" height="1.5" fill="url(#ppsc)"/></g>
+<g class="ppin" style="animation-delay:.05s"><rect x="44" y="30" width="208" height="24" rx="12" fill="#22d3ee" fill-opacity=".1" stroke="#22d3ee" stroke-opacity=".45"/><text x="57" y="46" class="ppm" font-size="11" letter-spacing="3" fill="#22d3ee">TYPESCRIPT · PUBLIK</text></g>
+<g class="ppin" style="animation-delay:.15s"><text x="44" y="92" font-size="32" font-weight="800" fill="url(#ppgT)">web-porto</text><text x="44" y="116" font-size="14" fill="#94a3b8">Web portofolio pribadi.</text></g>
+<g class="ppin" style="animation-delay:.3s"><rect x="44" y="130" width="95" height="24" rx="12" fill="#ffffff" fill-opacity=".06" stroke="url(#ppgA)" stroke-opacity=".55"/><text x="91.5" y="146" text-anchor="middle" font-size="12" font-weight="600" fill="#e8ecff">TypeScript</text></g>
+<rect x="626" y="26" width="240" height="128" rx="14" fill="#000000" fill-opacity=".28" stroke="#ffffff" stroke-opacity=".12"/><rect x="626" y="52" width="240" height="1" fill="#ffffff" fill-opacity=".1"/><circle cx="642" cy="39" r="3.5" fill="#ec4899" fill-opacity=".8"/><circle cx="655" cy="39" r="3.5" fill="#f59e0b" fill-opacity=".8"/><circle cx="668" cy="39" r="3.5" fill="#22c55e" fill-opacity=".8"/><rect x="700" y="34" width="150" height="11" rx="5.5" fill="#ffffff" fill-opacity=".08"/><rect class="ppk" x="642" y="66" width="96" height="76" rx="8" fill="#ffffff" fill-opacity=".1"/><rect x="750" y="68" width="100" height="8" rx="4" fill="url(#ppgB)" fill-opacity=".8"/><rect x="750" y="86" width="76" height="6" rx="3" fill="#ffffff" fill-opacity=".14"/><rect x="750" y="100" width="90" height="6" rx="3" fill="#ffffff" fill-opacity=".1"/><rect class="ppk" style="animation-delay:-2s" x="750" y="116" width="48" height="24" rx="8" fill="#ffffff" fill-opacity=".1"/><g class="ppcu"><path transform="translate(666 86)" d="M0 0L0 14L4 10.5L7 17L9.5 16L6.5 9.5L11.5 9.5Z" fill="#e8ecff" stroke="#05060f" stroke-width=".8"/></g></svg>
