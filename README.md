@@ -1,23 +1,25 @@
 <p align="center">
-  <img src="./hero.svg" alt="Bryan, Web Developer" width="100%" />
+  <img src="./t-header.svg" alt="Hai, saya Bryan. Web Developer" width="100%" />
 </p>
 
-## Tentang Saya
+Saya web developer yang membangun aplikasi bisnis berbasis web, mulai dari perancangan basis data, alur kerja dan hak akses pengguna, pelaporan, sampai keamanan dan pengujian. Sisi server saya bangun dengan **Laravel** dan **MySQL**, sedangkan antarmukanya dengan **TypeScript**, **Tailwind CSS**, HTML, dan CSS.
 
-Web developer dengan fokus pada pengembangan aplikasi bisnis berbasis web, mencakup perancangan basis data, alur kerja dan hak akses pengguna, pelaporan, keamanan, serta pengujian. Sisi server saya bangun dengan **Laravel** dan **MySQL**, sedangkan antarmuka dengan **TypeScript**, **Tailwind CSS**, HTML, dan CSS.
-
-Dalam setiap proyek, saya mengutamakan keandalan dan keamanan data: validasi input, pengendalian akses berbasis peran, pengujian otomatis sebelum rilis, serta kesiapan operasional seperti pencadangan data dan konfigurasi produksi.
+Dalam setiap proyek, saya mengutamakan keandalan dan keamanan data: validasi input, pengendalian akses berbasis peran, pengujian otomatis sebelum rilis, serta kesiapan operasional seperti pencadangan data dan konfigurasi produksi. Saya terbuka untuk kolaborasi dan diskusi seputar pengembangan web.
 
 <p align="center">
-  <img src="./skills.svg" alt="Keahlian: PHP, Laravel, MySQL, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, Git" width="100%" />
+  <img src="./t-stack.svg" alt="Tumpukan utama: PHP, Laravel, MySQL, TypeScript, Tailwind CSS. Pendukung: JavaScript, HTML5, CSS3, Alpine.js, Vite, SQLite. Perkakas: Git, GitHub, VS Code, npm" width="100%" />
 </p>
 
-<p align="center"><img src="./divider.svg" alt="" width="100%" /></p>
+<p align="center">
+  <img src="./t-stats.svg" alt="Statistik proyek, bahasa terbanyak, dan fokus kerja" width="100%" />
+</p>
+
+<p align="center"><img src="./t-divider.svg" alt="" width="100%" /></p>
 
 ## Project
 
 <p align="center">
-  <img src="./kartu-keuangan.svg" alt="Sistem Keuangan Kantor: aplikasi pencatatan keuangan dengan empat peran" width="100%" />
+  <img src="./t-kartu-keuangan.svg" alt="Sistem Keuangan Kantor: aplikasi pencatatan keuangan dengan empat peran" width="100%" />
 </p>
 
 **Sistem Keuangan Kantor** adalah aplikasi produksi untuk pencatatan keuangan kantor. Repositorinya private karena memuat logika dan data operasional, tetapi garis besar rancangannya sebagai berikut.
@@ -32,22 +34,12 @@ Dalam setiap proyek, saya mengutamakan keandalan dan keamanan data: validasi inp
 | **Kesiapan operasional** | Backup terenkripsi terjadwal beserta pemantauannya, serta konfigurasi produksi yang dipisahkan dari kode (berkas `.env` tidak ikut repositori). |
 
 <p align="center">
-  <img src="./kartu-porto.svg" alt="web-porto: web portofolio pribadi berbasis TypeScript" width="100%" />
+  <img src="./t-kartu-porto.svg" alt="web-porto: web portofolio pribadi berbasis TypeScript" width="100%" />
 </p>
 
 **[web-porto](https://github.com/bryanrumuy/web-porto)** adalah web portofolio pribadi berbasis TypeScript.
 
-<p align="center"><img src="./divider.svg" alt="" width="100%" /></p>
-
-## Fokus Teknis
-
-<p align="center">
-  <img src="./fokus.svg" alt="Fokus teknis: keamanan aplikasi web, pengujian otomatis, operasional dan deployment" width="100%" />
-</p>
-
-- **Keamanan aplikasi web**: pengendalian akses per peran, validasi dan sanitasi input, manajemen sesi, serta pemeriksaan kerentanan dependensi.
-- **Pengujian otomatis**: tes fitur, tes hak akses untuk setiap peran, dan tes keamanan yang dijalankan sebelum kode dirilis.
-- **Operasional dan deployment**: menyiapkan konfigurasi produksi, backup terenkripsi, dan pemantauan untuk dijalankan pada server terkelola.
+<p align="center"><img src="./t-divider.svg" alt="" width="100%" /></p>
 
 ## Cara Kerja
 
@@ -57,5 +49,5 @@ Dalam setiap proyek, saya mengutamakan keandalan dan keamanan data: validasi inp
 4. **Dokumentasikan keputusan** supaya aplikasi mudah dirawat orang lain.
 
 <p align="center">
-  <img src="./footer.svg" alt="Terima kasih sudah berkunjung" width="100%" />
+  <img src="./t-footer.svg" alt="Terima kasih sudah berkunjung" width="100%" />
 </p>

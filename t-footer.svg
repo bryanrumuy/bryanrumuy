@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="150" viewBox="0 0 900 150" role="img" aria-label="Terima kasih sudah berkunjung">
+<title>Terima kasih sudah berkunjung</title>
+<defs></defs>
+<style>
+.tf-t{font-family:'Segoe UI Black','Arial Black','Segoe UI',Arial,sans-serif;font-weight:900}
+.tf-n{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-weight:600}
+@keyframes tf-w1{0%{transform:translateX(0)}100%{transform:translateX(-300px)}}
+@keyframes tf-w2{0%{transform:translateX(-300px)}100%{transform:translateX(0)}}
+.tf-w1{animation:tf-w1 16s linear infinite}
+.tf-w2{animation:tf-w2 12s linear infinite}
+.tf-w3{animation:tf-w1 9s linear infinite}
+@keyframes tf-br{0%,100%{transform:scale(1);opacity:.88}50%{transform:scale(1.02);opacity:1}}
+.tf-b{transform-box:fill-box;transform-origin:center;animation:tf-br 5s ease-in-out infinite}
+.tf-b2{animation-delay:-2.5s}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
+<rect width="900" height="150" fill="#0d1117"/>
+<path class="tf-w1" d="M-300 94Q-225.0 85 -150.0 94T0 94T150 94T300 94T450 94T600 94T750 94T900 94T1050 94T1200 94T1350 94T1500 94V170H-300Z" fill="#7f1d1d" opacity=".9"/>
+<path class="tf-w2" d="M-300 104Q-225.0 96 -150.0 104T0 104T150 104T300 104T450 104T600 104T750 104T900 104T1050 104T1200 104T1350 104T1500 104V170H-300Z" fill="#b91c1c" opacity=".92"/>
+<path class="tf-w3" d="M-300 114Q-225.0 107 -150.0 114T0 114T150 114T300 114T450 114T600 114T750 114T900 114T1050 114T1200 114T1350 114T1500 114V170H-300Z" fill="#e11d2e"/>
+<rect x="0" y="138" width="900" height="12" fill="#0d1117"/>
+<text class="tf-t tf-b" x="450" y="50" text-anchor="middle" font-size="30" fill="#f5f5f5">Terima kasih sudah berkunjung</text>
+<text class="tf-n tf-b tf-b2" x="450" y="76" text-anchor="middle" font-size="16" fill="#facc15" letter-spacing="1.2">Terbuka untuk kolaborasi</text>
+</svg>

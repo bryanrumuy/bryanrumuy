@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="280" viewBox="0 0 900 280" role="img" aria-label="Hai, saya Bryan - Web Developer Laravel &amp; MySQL">
+<title>Hai, saya Bryan - Web Developer Laravel &amp; MySQL</title>
+<defs><linearGradient id="th-g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7f1d1d"/><stop offset=".5" stop-color="#e11d2e"/><stop offset="1" stop-color="#b91c1c"/></linearGradient>
+<linearGradient id="th-sh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".26"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<radialGradient id="th-bg" cx=".5" cy=".5" r=".6"><stop offset="0" stop-color="#7f1d1d" stop-opacity=".3"/><stop offset="1" stop-color="#0d1117" stop-opacity="0"/></radialGradient></defs>
+<style>
+.th-t{font-family:'Segoe UI Black','Arial Black','Segoe UI',Arial,sans-serif;font-weight:900}
+.th-n{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif}
+.th-m{font-family:'Consolas','Courier New',monospace}
+@keyframes th-sweep{0%{transform:translateX(-170px)}40%,100%{transform:translateX(1060px)}}
+.th-sheen{animation:th-sweep 5s ease-in-out infinite}
+@keyframes th-pulse{0%,100%{opacity:.35}50%{opacity:.95}}
+.th-edge{animation:th-pulse 3.2s ease-in-out infinite}
+.th-edge2{animation:th-pulse 3.2s ease-in-out infinite 1.6s}
+@keyframes th-sw{0%{opacity:1}29%{opacity:1}33%{opacity:0}96%{opacity:0}100%{opacity:1}}
+.th-s{animation:th-sw 9s linear infinite backwards}
+.th-s2{animation-delay:-6s}
+.th-s3{animation-delay:-3s}
+@keyframes th-fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.th-f{animation:th-fl 6s ease-in-out infinite}
+.th-f2{animation-delay:-1.5s}
+.th-f3{animation-delay:-3s}
+.th-f4{animation-delay:-4.5s}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
+<rect width="900" height="280" fill="#0d1117"/>
+<rect width="900" height="280" fill="url(#th-bg)"/>
+<g transform="rotate(-4 450 130)">
+<rect x="-80" y="77" width="1060" height="150" fill="#000" opacity=".4"/>
+<rect x="-80" y="69" width="1060" height="150" fill="#7a0f1a"/>
+<rect x="-80" y="55" width="1060" height="150" fill="url(#th-g)"/>
+<polygon points="60,55 100,55 70,205 30,205" fill="#fff" opacity=".05"/>
+<polygon points="780,55 840,55 810,205 750,205" fill="#fff" opacity=".05"/>
+<polygon points="870,55 890,55 860,205 840,205" fill="#000" opacity=".12"/>
+<rect class="th-edge" x="-80" y="55" width="1060" height="3" fill="#facc15" opacity=".6"/>
+<rect class="th-edge2" x="-80" y="202" width="1060" height="3" fill="#facc15" opacity=".6"/>
+<polygon class="th-sheen" points="40,55 130,55 90,205 0,205" fill="url(#th-sh)"/>
+<g class="th-m" font-size="26" font-weight="700" fill="#fbbf24" text-anchor="middle">
+<text class="th-f" x="66" y="104" fill-opacity=".3">&lt;/&gt;</text>
+<text class="th-f th-f2" x="70" y="166" font-size="30" fill-opacity=".26">;</text>
+<text class="th-f th-f3" x="834" y="104" fill-opacity=".3">{ }</text>
+<text class="th-f th-f4" x="830" y="166" font-size="22" fill-opacity=".26">&lt;/&gt;</text>
+</g>
+<text class="th-t" x="453" y="136" text-anchor="middle" font-size="72" fill="#3b0a0a" opacity=".55">Hai, saya Bryan</text>
+<text class="th-t" x="450" y="132" text-anchor="middle" font-size="72" fill="#facc15" stroke="#3b0a0a" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Hai, saya Bryan</text>
+<g class="th-n" font-size="26" font-weight="600" fill="#fff" text-anchor="middle">
+<text class="th-s" x="450" y="178">Web Developer · Laravel &amp; MySQL</text>
+<text class="th-s th-s2" x="450" y="178" opacity="0">Keamanan &amp; Pengujian Otomatis</text>
+<text class="th-s th-s3" x="450" y="178" opacity="0">Terbuka untuk kolaborasi</text>
+</g>
+</g>
+<text class="th-n" x="450" y="268" text-anchor="middle" font-size="18" fill="#a1a1aa">Membangun aplikasi web yang aman, teruji, dan siap dipakai.</text>
+</svg>

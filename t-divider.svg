@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="36" viewBox="0 0 900 36" role="img" aria-label="Pemisah">
+<title>Pemisah</title>
+<defs><linearGradient id="td-l" gradientUnits="userSpaceOnUse" x1="428" y1="0" x2="40" y2="0"><stop offset="0" stop-color="#e11d2e"/><stop offset="1" stop-color="#e11d2e" stop-opacity="0"/></linearGradient><linearGradient id="td-r" gradientUnits="userSpaceOnUse" x1="472" y1="0" x2="860" y2="0"><stop offset="0" stop-color="#e11d2e"/><stop offset="1" stop-color="#e11d2e" stop-opacity="0"/></linearGradient></defs>
+<style>
+@keyframes td-go{0%{transform:translateX(0)}100%{transform:translateX(820px)}}
+.td-dot{animation:td-go 4.5s ease-in-out infinite alternate}
+@keyframes td-bt{0%,100%{transform:scale(1)}50%{transform:scale(1.35)}}
+.td-dia{transform-box:fill-box;transform-origin:center;animation:td-bt 2.4s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
+<rect width="900" height="36" fill="#0d1117"/>
+<line x1="428" y1="18" x2="40" y2="18" stroke="url(#td-l)" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+<line x1="472" y1="18" x2="860" y2="18" stroke="url(#td-r)" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+<circle class="td-dot" cx="40" cy="18" r="3.2" fill="#facc15"/>
+<polygon class="td-dia" points="450,8 460,18 450,28 440,18" fill="#facc15" stroke="#0d1117" stroke-width="3" paint-order="stroke"/>
+</svg>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320" role="img" aria-label="Statistik Proyek, Bahasa Terbanyak, Fokus Kerja">
+<title>Statistik Proyek, Bahasa Terbanyak, Fokus Kerja</title>
+<defs></defs>
+<style>
+.tt-t{font-family:'Segoe UI Black','Arial Black','Segoe UI',Arial,sans-serif;font-weight:900}
+.tt-b{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-weight:700;font-variant-numeric:tabular-nums}
+.tt-n{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-variant-numeric:tabular-nums}
+@keyframes tt-fill{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}
+.tt-fill{transform-box:fill-box;transform-origin:0 50%;animation:tt-fill .9s cubic-bezier(.3,.7,.2,1) backwards}
+@keyframes tt-ic{0%,55%,100%{transform:scale(1)}78%{transform:scale(1.15)}}
+.tt-ic{transform-box:fill-box;transform-origin:center;animation:tt-ic 4s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}</style>
+<rect width="900" height="320" fill="#0d1117"/>
+<rect x="10" y="10" width="284" height="300" rx="16" fill="#14141a" stroke="#e11d2e" stroke-width="2"/>
+<rect x="308" y="10" width="284" height="300" rx="16" fill="#14141a" stroke="#e11d2e" stroke-width="2"/>
+<rect x="606" y="10" width="284" height="300" rx="16" fill="#14141a" stroke="#e11d2e" stroke-width="2"/>
+<text class="tt-t" x="46" y="56" font-size="22" fill="#facc15">Statistik Proyek</text>
+<line x1="46" y1="70" x2="270" y2="70" stroke="#2a2a33"/>
+<rect x="46" y="86" width="36" height="36" rx="10" fill="#1d1d25" stroke="#2a2a33"/><g transform="translate(53 93) scale(0.917)"><g class="tt-ic" style="animation-delay:0.00s" fill="none" stroke="#facc15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></g></g>
+<text class="tt-b" x="94" y="116" font-size="40" font-weight="900" fill="#facc15">500+</text><text class="tt-n" x="94" y="138" font-size="14" fill="#a1a1aa">Tes otomatis</text>
+<rect x="46" y="156" width="36" height="36" rx="10" fill="#1d1d25" stroke="#2a2a33"/><g transform="translate(53 163) scale(0.917)"><g class="tt-ic" style="animation-delay:0.55s" fill="none" stroke="#facc15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3"/><path d="M3 19c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><circle cx="17" cy="8" r="2.4"/><path d="M16.5 13.2c2.6.2 4.5 2 4.5 4.8"/></g></g>
+<text class="tt-n" x="94" y="170" font-size="14" fill="#a1a1aa">Peran pengguna</text><text class="tt-b" x="94" y="190" font-size="18" fill="#f5f5f5">4</text>
+<rect x="46" y="206" width="36" height="36" rx="10" fill="#1d1d25" stroke="#2a2a33"/><g transform="translate(53 213) scale(0.917)"><g class="tt-ic" style="animation-delay:1.10s" fill="none" stroke="#facc15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></g></g>
+<text class="tt-n" x="94" y="220" font-size="14" fill="#a1a1aa">Database teruji</text><text class="tt-b" x="94" y="240" font-size="18" fill="#f5f5f5">SQLite &amp; MySQL</text>
+<rect x="46" y="256" width="36" height="36" rx="10" fill="#1d1d25" stroke="#2a2a33"/><g transform="translate(53 263) scale(0.917)"><g class="tt-ic" style="animation-delay:1.65s" fill="none" stroke="#facc15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 4.5-9 4.5-9-4.5zM3 12l9 4.5 9-4.5M3 16.5l9 4.5 9-4.5"/></g></g>
+<text class="tt-n" x="94" y="270" font-size="14" fill="#a1a1aa">Framework</text><text class="tt-b" x="94" y="290" font-size="18" fill="#f5f5f5">Laravel 12</text>
+<text class="tt-t" x="344" y="56" font-size="22" fill="#facc15">Bahasa Terbanyak</text>
+<line x1="344" y1="70" x2="568" y2="70" stroke="#2a2a33"/>
+<rect class="tt-fill" x="344.0" y="92" width="140.6" height="14" rx="3" fill="#e11d2e" style="animation-delay:0.10s"/>
+<rect class="tt-fill" x="487.6" y="92" width="62.8" height="14" rx="3" fill="#facc15" style="animation-delay:0.35s"/>
+<rect class="tt-fill" x="553.4" y="92" width="8.6" height="14" rx="3" fill="#f97316" style="animation-delay:0.60s"/>
+<rect class="tt-fill" x="565.0" y="92" width="3.0" height="14" rx="3" fill="#f5f5f5" style="animation-delay:0.85s"/>
+<circle cx="350" cy="146" r="6" fill="#e11d2e"/><text class="tt-b" x="366" y="152" font-size="17" fill="#f5f5f5">PHP</text><text class="tt-b" x="568" y="152" text-anchor="end" font-size="17" fill="#f5f5f5">66,2%</text>
+<circle cx="350" cy="178" r="6" fill="#facc15"/><text class="tt-b" x="366" y="184" font-size="17" fill="#f5f5f5">Blade</text><text class="tt-b" x="568" y="184" text-anchor="end" font-size="17" fill="#f5f5f5">29,2%</text>
+<circle cx="350" cy="210" r="6" fill="#f97316"/><text class="tt-b" x="366" y="216" font-size="17" fill="#f5f5f5">CSS</text><text class="tt-b" x="568" y="216" text-anchor="end" font-size="17" fill="#f5f5f5">4,0%</text>
+<circle cx="350" cy="242" r="6" fill="#f5f5f5"/><text class="tt-b" x="366" y="248" font-size="17" fill="#f5f5f5">JavaScript</text><text class="tt-b" x="568" y="248" text-anchor="end" font-size="17" fill="#f5f5f5">0,6%</text>
+<text class="tt-n" x="344" y="282" font-size="14" fill="#a1a1aa">Sumber: repositori</text><text class="tt-n" x="344" y="300" font-size="14" fill="#a1a1aa">Sistem Keuangan Kantor</text>
+<text class="tt-t" x="642" y="56" font-size="22" fill="#facc15">Fokus Kerja</text>
+<line x1="642" y1="70" x2="866" y2="70" stroke="#2a2a33"/>
+<rect x="642" y="94" width="36" height="36" rx="10" fill="#1d1d25" stroke="#2a2a33"/><g transform="translate(649 101) scale(0.917)"><g class="tt-ic" style="animation-delay:2.20s" fill="none" stroke="#facc15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 3v5.5c0 4.6-3.1 8-7.5 9.5-4.4-1.5-7.5-4.9-7.5-9.5V6z"/><path d="M8.8 12l2.4 2.4 4-4.6"/></g></g>
+<text class="tt-b" x="690" y="109" font-size="16" fill="#f5f5f5">Keamanan</text><text class="tt-b" x="690" y="129" font-size="16" fill="#f5f5f5">aplikasi web</text>
+<rect x="642" y="164" width="36" height="36" rx="10" fill="#1d1d25" stroke="#2a2a33"/><g transform="translate(649 171) scale(0.917)"><g class="tt-ic" style="animation-delay:2.75s" fill="none" stroke="#facc15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6.5L5 18.5a1.8 1.8 0 001.6 2.5h10.8a1.8 1.8 0 001.6-2.5L14 9.5V3M7.5 15h9"/></g></g>
+<text class="tt-b" x="690" y="179" font-size="16" fill="#f5f5f5">Pengujian</text><text class="tt-b" x="690" y="199" font-size="16" fill="#f5f5f5">otomatis</text>
+<rect x="642" y="234" width="36" height="36" rx="10" fill="#1d1d25" stroke="#2a2a33"/><g transform="translate(649 241) scale(0.917)"><g class="tt-ic" style="animation-delay:3.30s" fill="none" stroke="#facc15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4.5 4.5 0 01-.5-9 5.5 5.5 0 0110.6 1.3A3.9 3.9 0 0117 18M12 21v-7M9 16.5l3-3 3 3"/></g></g>
+<text class="tt-b" x="690" y="249" font-size="16" fill="#f5f5f5">Backup &amp; konfigurasi</text><text class="tt-b" x="690" y="269" font-size="16" fill="#f5f5f5">produksi</text>
+
+</svg>
