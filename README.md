@@ -1,53 +1,50 @@
 <p align="center">
-  <img src="./t-header.svg" alt="Hai, saya Bryan. Web Developer" width="100%" />
-</p>
-
-Saya web developer yang membangun aplikasi bisnis berbasis web, mulai dari perancangan basis data, alur kerja dan hak akses pengguna, pelaporan, sampai keamanan dan pengujian. Sisi server saya bangun dengan **Laravel** dan **MySQL**, sedangkan antarmukanya dengan **TypeScript**, **Tailwind CSS**, HTML, dan CSS.
-
-Dalam setiap proyek, saya mengutamakan keandalan dan keamanan data: validasi input, pengendalian akses berbasis peran, pengujian otomatis sebelum rilis, serta kesiapan operasional seperti pencadangan data dan konfigurasi produksi. Saya terbuka untuk kolaborasi dan diskusi seputar pengembangan web.
-
-<p align="center">
-  <img src="./t-stack.svg" alt="Tumpukan utama: PHP, Laravel, MySQL, TypeScript, Tailwind CSS. Pendukung: JavaScript, HTML5, CSS3, Alpine.js, Vite, SQLite. Perkakas: Git, GitHub, VS Code, npm" width="100%" />
+  <img src="./pixel-header.gif" alt="Bryan Rumuy, web developer dan AI automation. Layar judul bergaya game pixel: karakter kecil berlari melompati duri dan mengumpulkan koin sepanjang satu hari penuh dari pagi sampai malam berbintang, dengan menu Projects, Skills, Contact" width="100%" />
 </p>
 
 <p align="center">
-  <img src="./u-stats.svg" alt="Statistik proyek, bahasa terbanyak, dan fokus kerja" width="100%" />
+  <a href="https://bryanrumuy-porto.vercel.app/">Portofolio</a> &nbsp;|&nbsp;
+  <a href="https://www.linkedin.com/in/bryanrumuy">LinkedIn</a> &nbsp;|&nbsp;
+  Surabaya, Indonesia
 </p>
 
-<p align="center"><img src="./t-divider.svg" alt="" width="100%" /></p>
+## Tentang saya
+
+Lulusan Teknik Informatika Universitas Surabaya (spesialisasi Data Science dan Artificial Intelligence). Saya membangun sistem web full-stack dan solusi AI yang menyelesaikan masalah bisnis nyata: dari rancangan basis data dan alur kerja, sampai pengujian, keamanan, dan penyerahan ke pengguna.
+
+Sisi server saya kerjakan dengan **Laravel** dan **MySQL**, sisi antarmuka dengan **TypeScript**, **Tailwind CSS**, HTML dan CSS. Untuk AI, saya menyambungkan model bahasa ke aplikasi nyata (function calling, basis pengetahuan, evaluasi otomatis), dan memakai Python dan TensorFlow untuk machine learning. Saya terbuka untuk peran Data Scientist, Web Developer, dan AI Automation.
+
+<p align="center"><img src="./pixel-divider.png" alt="" width="100%" /></p>
+
+## Skill
+
+<p align="center">
+  <img src="./pixel-stack.png" alt="Skill. Web: PHP, Laravel, TypeScript, Node.js, Tailwind CSS, MySQL, SQLite. Data dan AI: Python, TensorFlow, OpenAI API, aplikasi LLM, prompt, evaluasi. Tools: Git, GitHub, testing, CI, keamanan, bot Telegram" width="100%" />
+</p>
+
+<p align="center"><img src="./pixel-divider.png" alt="" width="100%" /></p>
 
 ## Project
 
-<p align="center">
-  <img src="./u-kartu-keuangan.svg" alt="Sistem Keuangan Kantor: aplikasi pencatatan keuangan dengan empat peran" width="100%" />
-</p>
-
-**Sistem Keuangan Kantor** adalah aplikasi produksi untuk pencatatan keuangan kantor. Repositorinya private karena memuat logika dan data operasional, tetapi garis besar rancangannya sebagai berikut.
-
-| Area | Penjelasan |
+| Project | Ringkasan |
 |---|---|
-| **Peran pengguna** | Empat peran: admin, finance, staf, dan pimpinan. Staf hanya melihat transaksinya sendiri, finance mencatat dan menyetujui, pimpinan memantau, admin mengelola akun. |
-| **Alur transaksi** | Uang masuk dan uang keluar melalui persetujuan finance, dengan nomor referensi otomatis, kategori, departemen, dan anggaran per departemen. Saldo awal terbawa antar bulan. |
-| **Dokumen** | Laporan PDF dan Excel dengan rumus Excel asli (bukan angka tempelan), buku kas, serta bukti kas siap cetak lengkap dengan terbilang dan kolom tanda tangan. |
-| **Keamanan** | Bukti transaksi disimpan privat, password sementara dari admin dengan kewajiban ganti saat login pertama, header keamanan, pembatasan laju, dan penguncian data pada proses yang bersamaan. |
-| **Kualitas** | Lebih dari 500 tes otomatis yang dijalankan pada SQLite dan MySQL, termasuk tes hak akses untuk setiap peran. |
-| **Kesiapan operasional** | Backup terenkripsi terjadwal beserta pemantauannya, serta konfigurasi produksi yang dipisahkan dari kode (berkas `.env` tidak ikut repositori). |
+| **[Alter](https://github.com/bryanrumuy/alter-ai-assistant)** | Asisten layanan pelanggan berbasis AI untuk bisnis kecil. Menjawab dari basis pengetahuan milik bisnis, menerima pesanan lewat function calling (item dibatasi menu, total dihitung kode), menyerahkan komplain dan keadaan darurat ke staf, dengan dasbor staf. Node.js, OpenAI API, SQLite. Proof of concept yang didemokan di Telegram dengan kafe fiktif. |
+| **[Blockchain WFH Monitoring](https://github.com/bryanrumuy/blockchain-wfh-monitoring)** | Proyek kuliah kelompok: aktivitas kerja dari rumah dicatat di ledger Hyperledger Fabric lewat chaincode JavaScript, REST API Node.js, dan klien web PHP. README menjelaskan batasannya secara jujur. |
+| **HerbalScan** (skripsi) | Aplikasi web yang mengenali 10 tanaman obat Indonesia dari foto daun. Lima model untuk masing-masing arsitektur MobileNetV2, ResNet50, dan VGG16 (15 model) memberi suara, dan gabungan suaranya mencapai akurasi 99,34% pada pengujian. Foto yang tidak meyakinkan ditolak. |
+| **Sistem Keuangan Kantor** (freelance) | Aplikasi pencatatan keuangan kantor dengan empat peran, persetujuan transaksi, laporan PDF dan Excel, 2FA, log audit, dan backup terenkripsi, dengan lebih dari 600 tes otomatis. Kodenya milik klien dan privat; bisa saya tunjukkan di layar saat wawancara. |
+| **[web-porto](https://github.com/bryanrumuy/web-porto)** | Web portofolio pribadi berbasis Next.js, TypeScript, dan Tailwind CSS, bertema dunia game pixel. |
 
-<p align="center">
-  <img src="./t-kartu-porto.svg" alt="web-porto: web portofolio pribadi berbasis TypeScript" width="100%" />
-</p>
+<p align="center"><img src="./pixel-divider.png" alt="" width="100%" /></p>
 
-**[web-porto](https://github.com/bryanrumuy/web-porto)** adalah web portofolio pribadi berbasis TypeScript.
+## Cara kerja
 
-<p align="center"><img src="./t-divider.svg" alt="" width="100%" /></p>
-
-## Cara Kerja
-
-1. **Pahami proses bisnisnya** sebelum menulis kode, termasuk siapa melakukan apa dan siapa boleh melihat apa.
-2. **Tulis tes untuk perilaku penting**, terutama hak akses dan perhitungan keuangan.
+1. **Pahami proses bisnisnya** sebelum menulis kode: siapa melakukan apa, dan siapa boleh melihat apa.
+2. **Tulis tes untuk perilaku penting**, terutama hak akses, perhitungan uang, dan jawaban AI.
 3. **Periksa keamanan sebelum rilis**, bukan sesudahnya.
-4. **Dokumentasikan keputusan** supaya aplikasi mudah dirawat orang lain.
+4. **Dokumentasikan keputusan dan batasannya**, supaya orang lain bisa merawat dan menilai hasilnya dengan jujur.
 
 <p align="center">
-  <img src="./t-footer.svg" alt="Terima kasih sudah berkunjung" width="100%" />
+  <img src="./pixel-footer.gif" alt="Terima kasih sudah mampir. Karakter pixel kecil berjalan di gurun senja melewati kaktus dan papan petunjuk" width="100%" />
 </p>
+
+<sub>Gambar pixel art: paket "Pixel Platformer" karya [Kenney](https://kenney.nl/assets/pixel-platformer), lisensi CC0. Huruf dan susunan adegan dibuat dengan skrip di folder `tools`.</sub>

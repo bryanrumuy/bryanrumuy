@@ -1,0 +1,21 @@
+{
+  "name": "bryanrumuy-profile",
+  "version": "1.0.0",
+  "description": "Artwork build scripts for the GitHub profile README",
+  "scripts": {
+    "scene": "node tools/scene.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryanrumuy/bryanrumuy.git"
+  },
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/bryanrumuy/bryanrumuy/issues"
+  },
+  "homepage": "https://github.com/bryanrumuy/bryanrumuy#readme",
+  "private": true,
+  "devDependencies": {
+    "sharp": "^0.35.5"
+  }
+}
