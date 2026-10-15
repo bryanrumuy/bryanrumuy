@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./pixel-header.gif" alt="Bryan Rumuy, web developer dan AI automation. Layar judul bergaya game pixel: karakter kecil berlari melompati duri dan mengumpulkan koin sepanjang satu hari penuh dari pagi sampai malam berbintang, dengan menu Projects, Skills, Contact" width="100%" />
+  <img src="./pixel-header.gif" alt="Bryan Rumuy, web developer dan AI automation. Layar judul bergaya game pixel: seorang ninja berlari di desa saat senja, melompati pagar dan mengumpulkan koin di antara rumah kayu, lentera, dan gerbang desa, dengan menu Projects, Skills, Contact" width="100%" />
 </p>
 
 <p align="center">
@@ -47,4 +47,4 @@ Sisi server saya kerjakan dengan **Laravel** dan **MySQL**, sisi antarmuka denga
   <img src="./pixel-footer.gif" alt="Terima kasih sudah mampir. Karakter pixel kecil berjalan di gurun senja melewati kaktus dan papan petunjuk" width="100%" />
 </p>
 
-<sub>Gambar pixel art: paket "Pixel Platformer" karya [Kenney](https://kenney.nl/assets/pixel-platformer), lisensi CC0. Huruf dan susunan adegan dibuat dengan skrip di folder `tools`.</sub>
+<sub>Gambar pixel art: paket "Pixel Platformer" dan "Tiny Town" karya [Kenney](https://kenney.nl), lisensi CC0. Ninja, gerbang, dan lentera saya gambar sendiri lewat kode. Huruf dan susunan adegan dibuat dengan skrip di folder `tools`.</sub>

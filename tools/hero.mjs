@@ -1,238 +1,276 @@
-// The profile's hero animation: a runner on a platformer course that jumps over spikes, collects coins and
-// runs through a full day (sunrise, noon, dusk, night with stars and fireflies) in one 6.5 second loop.
-// Everything is drawn from Kenney's CC0 "Pixel Platformer" tiles plus the bitmap font; the loop is exact,
-// so the GIF repeats without a jump.
+// The profile's hero animation: an original ninja running through a village at dusk. He leaps over fences,
+// grabs coins, and passes wooden houses, lanterns, trees and the village gate while the lanterns flicker and
+// the first stars come out. The houses and fences are Kenney's CC0 "Tiny Town" tiles; the ninja, gate,
+// lanterns and sky are drawn in code. The loop is exact (72 frames), so the GIF repeats without a jump.
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 import { paintCells, pixelText, rng, svgDoc, textWidth } from "./pixel.mjs";
+import { ninjaFrames } from "./ninja.mjs";
 
 export const HERO = { W: 207, H: 128, FRAMES: 72 };
 
-const GROUND = 104; // y of the top of the grass row
-const BG_TOP = GROUND - 72; // the background theme is 72 px tall and sits on the ground
-const SPEED = 4; // px per frame the ground moves
-const PERIOD = 288; // 72 frames * 4 px: the ground repeats exactly once per loop
-const RUNNER_X = 32;
-const SPIKES = [108, 252]; // world x of the two obstacles (144 apart)
-const APEX_FRAMES = SPIKES.map((x) => (x - 36) / SPEED); // the frame each obstacle is under the runner: 18 and 54
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const TOWN = sharp(path.join(root, "assets", "kenney-town", "tilemap_packed.png"));
+const TS = 16; // tile size of the Tiny Town pack
+const COLS = 12;
+const townTile = (n) =>
+  TOWN.clone().extract({ left: (n % COLS) * TS, top: Math.floor(n / COLS) * TS, width: TS, height: TS }).png().toBuffer();
 
-const lerp = (a, b, t) => a + (b - a) * t;
-const clamp01 = (v) => Math.max(0, Math.min(1, v));
+const GROUND = 104; // y of the top of the dirt path the ninja runs on
+const SPEED = 4; // px per frame the village moves
+const PERIOD = 288; // 72 frames * 4 px: the village repeats exactly once per loop
+const FAR_SPEED = 2; // the distant rooftops
+const FAR_PERIOD = 144;
+const RUNNER_X = 36;
+const FENCES = [112, 256]; // world x of the two fences, 144 apart
+const APEX_FRAMES = FENCES.map((x) => (x - RUNNER_X - 4) / SPEED); // frame when each fence is under the ninja
+const COINS = [100, 110, 120, 244, 254, 264];
+const COIN_Y = GROUND - 44;
+const LANTERNS = [58, 130, 202, 274]; // world x of the hanging lanterns (centre)
+const LANTERN_Y = GROUND - 30;
 
-/** Colour and strength of the light over the scene at time t (0..1 across the loop). */
-function tint(t) {
-  const keys = [
-    { t: 0, c: [255, 160, 190], a: 0.16 }, // dawn
-    { t: 0.1, c: [255, 220, 180], a: 0 },
-    { t: 0.4, c: [255, 220, 180], a: 0 },
-    { t: 0.52, c: [255, 120, 50], a: 0.3 }, // dusk
-    { t: 0.64, c: [10, 16, 48], a: 0.58 }, // night
-    { t: 0.84, c: [10, 16, 48], a: 0.58 },
-    { t: 0.94, c: [255, 140, 170], a: 0.24 },
-    { t: 1, c: [255, 160, 190], a: 0.16 },
+const SKY_BANDS = ["#2a2a5c", "#40367a", "#5d3f86", "#8a4a8c", "#b85a85", "#dd6f6e", "#f08f66", "#fbb06c", "#ffd08a"];
+
+const range = (n) => Array.from({ length: n }, (_, i) => i);
+const shift = (x, i, speed, period) => (((x - speed * i) % period) + period) % period;
+
+// ---------------------------------------------------------------------------------------------
+// Layers that never change
+
+const svgPng = (w, h, body) => sharp(Buffer.from(svgDoc(w, h, "layer", body)), { density: 72 }).png().toBuffer();
+
+async function sky() {
+  const bandH = Math.ceil(GROUND / SKY_BANDS.length);
+  const body = SKY_BANDS.map((c, k) => `<rect x="0" y="${k * bandH}" width="${HERO.W}" height="${bandH + 1}" fill="${c}"/>`).join("");
+  // A low half-sun on the horizon, behind everything
+  return svgPng(HERO.W, HERO.H, body + `<rect x="0" y="${GROUND}" width="${HERO.W}" height="${HERO.H - GROUND}" fill="#3a2a2e"/>`);
+}
+
+/** Dark hills and distant roofs that drift slowly behind the village. One tile of FAR_PERIOD width. */
+async function farLayer() {
+  const h = 46;
+  const cells = [];
+  // rolling hills (a stepped sine) and a few tiny roofs on them
+  for (let x = 0; x < FAR_PERIOD; x += 1) {
+    const top = Math.round(18 + 8 * Math.sin((x / FAR_PERIOD) * Math.PI * 4) + 4 * Math.sin((x / FAR_PERIOD) * Math.PI * 10));
+    for (let y = top; y < h; y += 1) cells.push([x, y]);
+  }
+  const roofs = [];
+  [14, 62, 108].forEach((x0) => {
+    const base = Math.round(18 + 8 * Math.sin((x0 / FAR_PERIOD) * Math.PI * 4) + 4 * Math.sin((x0 / FAR_PERIOD) * Math.PI * 10)) + 1;
+    for (let r = 0; r < 4; r += 1) for (let x = r; x < 12 - r; x += 1) roofs.push([x0 + x, base - 8 + r]);
+    for (let y = base - 4; y < base; y += 1) for (let x = 1; x < 11; x += 1) roofs.push([x0 + x, y]);
+  });
+  const body = paintCells({ "#4a3366": cells }, 1) + paintCells({ "#3a2858": roofs }, 1);
+  return svgPng(FAR_PERIOD, h, body);
+}
+
+/** A Japanese-inspired village gate (generic shape, drawn in code), 44 px wide. */
+function gateSvg() {
+  const post = (x) => `<rect x="${x}" y="8" width="4" height="40" fill="#b3402e"/><rect x="${x}" y="8" width="1" height="40" fill="#d9644a"/>`;
+  return (
+    post(6) + post(34) +
+    `<rect x="0" y="2" width="44" height="4" fill="#7c2a22"/><rect x="2" y="0" width="40" height="2" fill="#7c2a22"/>` +
+    `<rect x="4" y="12" width="36" height="3" fill="#b3402e"/>` +
+    `<rect x="19" y="6" width="6" height="6" fill="#7c2a22"/>`
+  );
+}
+
+async function village({ ninja }) {
+  const wall = [72, 73, 75]; // wooden wall
+  const roof = [52, 53, 54]; // red tiles
+  const parts = [];
+  const house = (x, win) => {
+    // x is the left edge, three tiles wide: wall row then roof row, standing on the lawn
+    const base = GROUND - 12;
+    for (let k = 0; k < 3; k += 1) {
+      parts.push({ n: roof[k], left: x + k * TS, top: base - 2 * TS });
+      parts.push({ n: k === 1 ? 86 : win ? 84 : wall[k], left: x + k * TS, top: base - TS });
+    }
+  };
+  const tree = (n, x) => parts.push({ n, left: x, top: GROUND - 12 - TS });
+  const lawn = (x, w) => {
+    for (let px = x; px < x + w; px += TS) parts.push({ n: (px / TS) % 3 === 0 ? 0 : 1, left: px, top: GROUND - 16 });
+  };
+
+  const items = [
+    () => house(8, true),
+    () => tree(16, 66),
+    () => tree(28, 84),
+    () => house(150, false),
+    () => tree(15, 204),
+    () => tree(4, 228),
   ];
-  let i = 0;
-  while (i < keys.length - 2 && t > keys[i + 1].t) i += 1;
-  const k = clamp01((t - keys[i].t) / (keys[i + 1].t - keys[i].t));
-  const c = keys[i].c.map((v, n) => Math.round(lerp(v, keys[i + 1].c[n], k)));
-  return { r: c[0], g: c[1], b: c[2], alpha: lerp(keys[i].a, keys[i + 1].a, k) };
+  items.forEach((fn) => fn());
+
+  const strip = await sharp({ create: { width: PERIOD, height: HERO.H, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } } }).png().toBuffer();
+  const layers = [];
+  // lawn across the whole period
+  for (let x = 0; x < PERIOD; x += TS) layers.push({ input: await townTile((x / TS) % 4 === 1 ? 2 : (x / TS) % 3 === 0 ? 1 : 0), left: x, top: GROUND - 16 });
+  for (const p of parts.filter((q) => q.top !== GROUND - 16)) layers.push({ input: await townTile(p.n), left: p.left, top: p.top });
+  // the village gate between the two houses
+  layers.push({ input: await svgPng(44, 48, gateSvg()), left: 100 - 22 + 0, top: GROUND - 12 - 48 });
+  // the dirt path
+  for (let x = 0; x < PERIOD; x += TS) {
+    layers.push({ input: await townTile([39, 40, 41, 40][(x / TS) % 4]), left: x, top: GROUND });
+    layers.push({ input: await townTile(25), left: x, top: GROUND + TS });
+  }
+  const villageStrip = await sharp(strip).composite(layers).png().toBuffer();
+  // twice the width so a window of any offset is one extract
+  const doubled = await sharp({ create: { width: PERIOD * 2, height: HERO.H, channels: 4, background: { r: 0, g: 0, b: 0, alpha: 0 } } })
+    .composite([{ input: villageStrip, left: 0, top: 0 }, { input: villageStrip, left: PERIOD, top: 0 }])
+    .png()
+    .toBuffer();
+  void ninja;
+  return doubled;
 }
 
-/** 0 in daylight, 1 in full night. */
-function nightness(t) {
-  if (t < 0.5 || t > 0.97) return 0;
-  if (t < 0.64) return (t - 0.5) / 0.14;
-  if (t < 0.84) return 1;
-  return 1 - (t - 0.84) / 0.13;
+/** The cached layers that do not change from frame to frame. */
+export async function prepareHero() {
+  const ninja = await ninjaFrames();
+  const fences = await Promise.all([44, 46].map(townTile));
+  return {
+    sky: await sky(),
+    far: await farLayer(),
+    village: await village({ ninja }),
+    ninja,
+    fence: fences,
+    coin: await townTile(93),
+  };
 }
+
+// ---------------------------------------------------------------------------------------------
+// Frames
+
+const CLOUD = ["..wwww..........", ".wwwwwwwwww.....", "wwwwwwwwwwwwwww.", "sssssssssssssss."];
+const cloudSvg = (rows) =>
+  rows
+    .map((row, y) => [...row].map((ch, x) => (ch === "." ? "" : `<rect x="${x}" y="${y}" width="1" height="1" fill="${ch === "w" ? "#f8c9b8" : "#e29aa0"}"/>`)).join(""))
+    .join("");
 
 const disc = (r) => {
   const cells = [];
   for (let y = -r; y <= r; y += 1) for (let x = -r; x <= r; x += 1) if (x * x + y * y <= r * r + r * 0.8) cells.push([x + r, y + r]);
   return cells;
 };
-const SUN = paintCells({ "#fff3a0": disc(6) }, 1, 0, 0);
-const SUN_CORE = paintCells({ "#ffe14d": disc(4).map(([x, y]) => [x + 2, y + 2]) }, 1, 0, 0);
-const MOON = paintCells({ "#f4f1d6": disc(5) }, 1, 0, 0) + paintCells({ "#d8d4b0": [[3, 4], [4, 4], [4, 5], [7, 3], [7, 7], [8, 7]] }, 1, 0, 0);
+const MOON = paintCells({ "#fff3c4": disc(5) }, 1) + paintCells({ "#e6d9a0": [[3, 4], [4, 4], [4, 5], [7, 3], [7, 7], [8, 7]] }, 1);
 
-const CLOUD_GRIDS = [
-  ["..wwww..........", ".wwwwwwwwww.....", "wwwwwwwwwwwwwww.", "sssssssssssssss."],
-  ["....www....", ".wwwwwwwww.", "wwwwwwwwwww", "sssssssssss"],
-];
-const cloudSvg = (rows) =>
-  rows
-    .map((row, y) => [...row].map((ch, x) => (ch === "." ? "" : `<rect x="${x}" y="${y}" width="1" height="1" fill="${ch === "w" ? "#ffffff" : "#cfeaf8"}"/>`)).join(""))
-    .join("");
-
-/** The cached layers that do not change from frame to frame. */
-export async function prepareHero({ tile, sprite, background, groundStrip, repeatProps, T, TILE }) {
-  const bg = await background("green");
-  const props = repeatProps(
-    [
-      [T.pine, 14, 0],
-      [T.sprout[0], 40, 0],
-      [T.signRight, 62, 0],
-      ...SPIKES.map((x) => [68, x, 0]),
-      [T.mushroom, 170, 0],
-      [T.sprout[1], 200, 0],
-      [T.pine, 232, 0],
-      [T.flag, 270, 0],
-    ],
-    PERIOD,
-    3
-  );
-  const strip = await groundStrip({
-    width: PERIOD + HERO.W + TILE * 3,
-    height: HERO.H - 40,
-    top: GROUND - 40,
-    grass: T.grass,
-    dirt: T.dirt,
-    props,
-    dirtRows: 1,
-  });
-  const clouds = await Promise.all(
-    CLOUD_GRIDS.map(async (rows) =>
-      sharp(Buffer.from(svgDoc(rows[0].length, rows.length, "cloud", cloudSvg(rows))), { density: 72 }).png().toBuffer()
-    )
-  );
-  return {
-    bg,
-    strip,
-    clouds,
-    coin: await tile(T.coin),
-    heart: await tile(T.heart),
-    runner: [await sprite(6, 0), await sprite(7, 0)],
-    sky: await sharp({ create: { width: HERO.W, height: HERO.H, channels: 4, background: "#86efac" } }).png().toBuffer(),
-  };
-}
-
-const COINS = [100, 110, 120, 244, 254, 264]; // world x of the six coins, three over each obstacle
-const COIN_Y = GROUND - 42;
-
-/** The first frame in which a coin has crossed the runner (screen x below 44) and counts as collected. */
 const collectedAt = (x) => Math.floor((x - 44) / SPEED) + 1;
 
 /** Builds the frames of the loop as logical-size PNG buffers. */
 export async function renderHero(layers, { subtitle }) {
   const { W, H, FRAMES } = HERO;
-  const random = rng(5);
-  const stars = Array.from({ length: 34 }, () => ({ x: Math.floor(random() * W), y: 2 + Math.floor(random() * 60), phase: Math.floor(random() * 6) }));
-  const flies = Array.from({ length: 7 }, (_, k) => ({ x: 20 + k * 28, y: GROUND - 14 - (k % 3) * 9, phase: k * 11 }));
+  const random = rng(11);
+  const stars = Array.from({ length: 30 }, () => ({ x: Math.floor(random() * W), y: 1 + Math.floor(random() * 40), phase: Math.floor(random() * 6) }));
+  const flies = range(8).map((k) => ({ x: 14 + k * 26, y: GROUND - 10 - (k % 3) * 8, phase: k * 11 }));
 
-  const title = pixelText("BRYAN RUMUY", Math.round((W - textWidth("BRYAN RUMUY", 2)) / 2), 24, 2, "#ff9a1f", "#4a2306", 1);
+  const title = pixelText("BRYAN RUMUY", Math.round((W - textWidth("BRYAN RUMUY", 2)) / 2), 24, 2, "#ffb43a", "#3d1d08", 1);
   const subX = Math.round((W - textWidth(subtitle, 1)) / 2);
   const plate = (x, y, w, h) =>
-    `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#1f2a44" opacity=".8"/><rect x="${x}" y="${y}" width="${w}" height="1" fill="#ffffff" opacity=".35"/>`;
+    `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#1c1636" opacity=".8"/><rect x="${x}" y="${y}" width="${w}" height="1" fill="#ffffff" opacity=".35"/>`;
   const staticUi =
     plate(subX - 6, 44, textWidth(subtitle, 1) + 12, 13) +
-    pixelText(subtitle, subX, 47, 1, "#ffffff", "#0b1424", 1) +
+    pixelText(subtitle, subX, 47, 1, "#ffffff", "#0b0818", 1) +
     plate(122, 62, 80, 27) +
-    pixelText("PROJECTS", 136, 66, 1, "#ffffff", "#0b1424", 1) +
-    pixelText("SKILLS", 136, 75, 1, "#cfe9ff", "#0b1424", 1) +
-    pixelText("CONTACT", 136, 84, 1, "#cfe9ff", "#0b1424", 1) +
+    pixelText("PROJECTS", 136, 66, 1, "#ffffff", "#0b0818", 1) +
+    pixelText("SKILLS", 136, 75, 1, "#ffd9b0", "#0b0818", 1) +
+    pixelText("CONTACT", 136, 84, 1, "#ffd9b0", "#0b0818", 1) +
     title;
-  const staticUiPng = await sharp(Buffer.from(svgDoc(W, H, "ui", staticUi)), { density: 72 }).png().toBuffer();
+  const staticUiPng = await svgPng(W, H, staticUi);
+  const moonPng = await svgPng(W, H, `<g transform="translate(8 6)">${MOON}</g>`);
 
   const frames = [];
   for (let i = 0; i < FRAMES; i += 1) {
-    const t = i / FRAMES;
-    const night = nightness(t);
+    // distant rooftops, 2 px per frame; they sit on the horizon
+    const farShift = (FAR_SPEED * i) % FAR_PERIOD;
+    const far = await sharp(layers.far).extract({ left: 0, top: 0, width: FAR_PERIOD, height: 46 }).png().toBuffer();
+    const farParts = [];
+    for (let x = -farShift; x < W; x += FAR_PERIOD) farParts.push({ input: far, left: x, top: GROUND - 16 - 46 + 6 });
 
-    // Background hills, drifting slowly (2 px per frame, an exact multiple of the 48 px tile over the loop)
-    const bgShift = (2 * i) % 144;
-    const parts = [];
-    for (let x = -bgShift; x < W; x += 48) parts.push({ input: layers.bg, left: x, top: BG_TOP });
-
-    // Sun by day, moon by night
-    const daySun = t < 0.55 ? t / 0.55 : null;
-    const nightMoon = t >= 0.5 ? (t - 0.5) / 0.5 : null;
-    const skyBits = [];
-    if (daySun !== null) {
-      const x = Math.round(8 + 190 * daySun);
-      const y = Math.round(58 - 26 * Math.sin(Math.PI * daySun));
-      skyBits.push(`<g transform="translate(${x} ${y})">${SUN}<g transform="translate(0 0)">${SUN_CORE}</g></g>`);
-    }
-    if (nightMoon !== null) {
-      const x = Math.round(8 + 190 * nightMoon);
-      const y = Math.round(58 - 28 * Math.sin(Math.PI * nightMoon));
-      skyBits.push(`<g transform="translate(${x} ${y})">${MOON}</g>`);
-    }
-    // Clouds drift right, 3 px per frame over a 216 px loop
-    const cloudSvgs = [
-      [0, 30, 20],
-      [1, 40, 100],
-      [0, 36, 170],
-    ].map(([n, y, x0]) => {
+    const clouds = [[30, 20], [40, 110], [34, 190]].map(([y, x0]) => {
       const x = ((x0 + 3 * i) % 216) - 20;
-      return `<g transform="translate(${x} ${y})">${cloudSvg(CLOUD_GRIDS[n])}</g>`;
+      return `<g transform="translate(${x} ${y})">${cloudSvg(CLOUD)}</g>`;
     });
-    const skyPng = await sharp(Buffer.from(svgDoc(W, H, "sky", skyBits.join("") + cloudSvgs.join(""))), { density: 72 }).png().toBuffer();
+    const stuff = [];
+    stars.forEach((s, k) => {
+      if ((i + s.phase + k) % 6 < 4) stuff.push(`<rect x="${s.x}" y="${s.y}" width="1" height="1" fill="#ffffff" opacity=".85"/>`);
+    });
+    const skyPng = await svgPng(W, H, stuff.join("") + clouds.join(""));
 
-    // Ground, moving 4 px per frame
-    const groundCrop = await sharp(layers.strip).extract({ left: (SPEED * i) % PERIOD, top: 0, width: W, height: H - 40 }).png().toBuffer();
+    const villageCrop = await sharp(layers.village).extract({ left: (SPEED * i) % PERIOD, top: 0, width: W, height: H }).png().toBuffer();
 
-    // The runner: legs alternate every 3 frames, and a jump over each obstacle
-    const step = Math.floor(i / 3) % 2;
+    // lanterns: a warm glow that flickers, drawn above the village in screen space
+    const lanternBits = LANTERNS.map((wx, k) => {
+      const x = shift(wx, i, SPEED, PERIOD);
+      if (x < -10 || x > W + 10) return "";
+      const flick = (i + k * 3) % 6 < 3 ? 0.34 : 0.22;
+      return (
+        `<rect x="${x - 9}" y="${LANTERN_Y - 8}" width="19" height="19" fill="#ffb347" opacity="${(flick * 0.55).toFixed(2)}"/>` +
+        `<rect x="${x - 6}" y="${LANTERN_Y - 5}" width="13" height="13" fill="#ffb347" opacity="${flick.toFixed(2)}"/>` +
+        `<rect x="${x}" y="${LANTERN_Y - 12}" width="1" height="8" fill="#3a1a14"/>` +
+        `<rect x="${x - 3}" y="${LANTERN_Y - 4}" width="7" height="9" fill="#d6362e"/><rect x="${x - 2}" y="${LANTERN_Y - 3}" width="5" height="7" fill="#ffd36b"/>` +
+        `<rect x="${x - 3}" y="${LANTERN_Y - 4}" width="7" height="1" fill="#3a1a14"/><rect x="${x - 3}" y="${LANTERN_Y + 4}" width="7" height="1" fill="#3a1a14"/>`
+      );
+    }).join("");
+    const glowBits = flies.map((f) => {
+      const x = Math.round(f.x + 6 * Math.sin((i + f.phase) / 5));
+      const y = Math.round(f.y + 4 * Math.sin((i + f.phase) / 3));
+      return `<rect x="${x}" y="${y}" width="1" height="1" fill="#fff27a" opacity=".95"/><rect x="${x - 1}" y="${y}" width="3" height="1" fill="#fff27a" opacity=".3"/>`;
+    }).join("");
+
+    // fences (obstacles) and coins
+    const fenceParts = FENCES.flatMap((x) => {
+      const sx = shift(x, i, SPEED, PERIOD);
+      return [sx, sx - PERIOD].filter((v) => v > -2 * TS && v < W).flatMap((v) => [
+        { input: layers.fence[0], left: v, top: GROUND - TS + 2 },
+        { input: layers.fence[1], left: v + TS, top: GROUND - TS + 2 },
+      ]);
+    });
+    const coinParts = [];
+    let collected = 0;
+    COINS.forEach((x) => {
+      const sx = shift(x, i, SPEED, PERIOD);
+      if (i >= collectedAt(x)) collected += 1;
+      if (sx >= 44 && sx < W + 9) coinParts.push({ input: layers.coin, left: sx - 9, top: COIN_Y - Math.round(2 * Math.sin((i + x) / 3)) });
+    });
+
+    // the ninja: legs alternate every 3 frames, a jump over each fence
+    const step = Math.floor(i / 3) % 4;
     let lift = 0;
     let airborne = false;
     for (const apex of APEX_FRAMES) {
       const d = i - apex;
-      if (Math.abs(d) <= 6) {
-        lift = Math.max(lift, Math.round(22 * (1 - (d / 6) ** 2)));
+      if (Math.abs(d) <= 7) {
+        lift = Math.max(lift, Math.round(22 * (1 - (d / 7) ** 2)));
         airborne = true;
       }
     }
-    const runnerTop = GROUND + 3 - 24 - lift + (!airborne && step ? -1 : 0);
+    const bob = !airborne && step % 2 === 1 ? -1 : 0;
+    const ninjaTop = GROUND + 2 - 22 - lift + bob;
 
-    // Coins still in the air: a coin that crossed the runner is gone until it comes round again from the right
-    const coinParts = [];
-    let collected = 0;
-    COINS.forEach((x) => {
-      const screenX = (((x - SPEED * i) % PERIOD) + PERIOD) % PERIOD;
-      if (i >= collectedAt(x)) collected += 1;
-      if (screenX >= 44 && screenX < W + 9) {
-        coinParts.push({ input: layers.coin, left: screenX - 9, top: COIN_Y - Math.round(2 * Math.sin((i + x) / 3)) });
-      }
-    });
+    const hud = pixelText(`${collected}`, 190, 8, 2, "#ffffff", "#0b0818", 1) + pixelText("COINS", 148, 11, 1, "#ffd36b", "#0b0818", 1);
+    const cursor = Math.floor(i / 6) % 2 === 0 ? pixelText(">", 127, 66, 1, "#ffcc33", "#0b0818", 1) : "";
+    const dynamicUi = await svgPng(W, H, hud + cursor);
+    const lanternPng = await svgPng(W, H, lanternBits + glowBits);
 
-    // Night: stars and fireflies
-    const nightBits = [];
-    if (night > 0) {
-      stars.forEach((s, k) => {
-        const visible = (i + s.phase + k) % 6 < 4;
-        if (visible) nightBits.push(`<rect x="${s.x}" y="${s.y}" width="1" height="1" fill="#ffffff" opacity="${(0.9 * night).toFixed(2)}"/>`);
-      });
-      flies.forEach((f) => {
-        const x = Math.round(f.x + 6 * Math.sin((i + f.phase) / 5));
-        const y = Math.round(f.y + 4 * Math.sin((i + f.phase) / 3));
-        nightBits.push(`<rect x="${x}" y="${y}" width="1" height="1" fill="#fff27a" opacity="${(0.95 * night).toFixed(2)}"/>`);
-        nightBits.push(`<rect x="${x - 1}" y="${y}" width="3" height="1" fill="#fff27a" opacity="${(0.28 * night).toFixed(2)}"/>`);
-      });
-    }
-
-    // HUD: three hearts on the left, the coin count on the right
-    const hud =
-      pixelText(`${collected}`, 190, 8, 2, "#ffffff", "#0b1424", 1) +
-      pixelText("COINS", 148, 11, 1, "#ffe14d", "#0b1424", 1);
-    const dynamicUi = await sharp(Buffer.from(svgDoc(W, H, "hud", hud + (Math.floor(i / 6) % 2 === 0 ? pixelText(">", 127, 66, 1, "#ffcc33", "#0b1424", 1) : "")))).png().toBuffer();
-    const nightPng = night > 0 ? await sharp(Buffer.from(svgDoc(W, H, "night", nightBits.join("")))).png().toBuffer() : null;
-
-    const tc = tint(t);
-    const tintLayer = await sharp({ create: { width: W, height: H, channels: 4, background: { r: tc.r, g: tc.g, b: tc.b, alpha: tc.alpha } } }).png().toBuffer();
-
-    const heartLeft = [0, 1, 2].map((k) => ({ input: layers.heart, left: 4 + k * 17, top: 3 }));
-    const layersList = [
-      ...parts,
-      { input: skyPng, left: 0, top: 0 },
-      { input: groundCrop, left: 0, top: 40 },
-      ...coinParts,
-      { input: layers.runner[airborne ? 0 : step], left: RUNNER_X, top: runnerTop },
-      { input: tintLayer, left: 0, top: 0 },
-      ...(nightPng ? [{ input: nightPng, left: 0, top: 0 }] : []),
-      ...heartLeft,
-      { input: staticUiPng, left: 0, top: 0 },
-      { input: dynamicUi, left: 0, top: 0 },
-    ];
-    frames.push(await sharp(layers.sky).composite(layersList).png().toBuffer());
+    frames.push(
+      await sharp(layers.sky)
+        .composite([
+          { input: skyPng, left: 0, top: 0 },
+          { input: moonPng, left: 0, top: 0 },
+          ...farParts,
+          { input: villageCrop, left: 0, top: 0 },
+          { input: lanternPng, left: 0, top: 0 },
+          ...fenceParts,
+          ...coinParts,
+          { input: airborne ? layers.ninja.jump : layers.ninja.run[step], left: RUNNER_X, top: ninjaTop },
+          { input: staticUiPng, left: 0, top: 0 },
+          { input: dynamicUi, left: 0, top: 0 },
+        ])
+        .png()
+        .toBuffer()
+    );
   }
   return frames;
 }

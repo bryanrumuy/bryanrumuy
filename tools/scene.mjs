@@ -91,7 +91,7 @@ async function assemble(frames, delay, out, label) {
 // Header: the title screen
 
 async function header() {
-  const layers = await prepareHero({ tile, sprite, background, groundStrip, repeatProps, T, TILE });
+  const layers = await prepareHero();
   const frames = await renderHero(layers, { subtitle: "WEB DEVELOPER & AI AUTOMATION" });
   await assemble(frames, 90, "pixel-header.gif", `${frames.length} frames`);
   return frames[0];
