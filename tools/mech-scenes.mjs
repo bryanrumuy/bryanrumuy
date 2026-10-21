@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 import { gif } from "./fb.mjs";
 import { HEADER, headerBase, renderHeaderFrame } from "./mech-header.mjs";
 import { PILOT, pilotFrame } from "./pilot.mjs";
-import { SKILLS, skillsFrame } from "./skills.mjs";
+import { skillsFrame } from "./skills.mjs";
 import { CARD, PROJECTS, cardFrame } from "./missions.mjs";
 import { BANNER, BUTTON, COLOURS, bannerFrame, buttonFrame } from "./ui.mjs";
 import { FOOTER, footerFrame } from "./footer.mjs";
@@ -39,7 +39,7 @@ if (want("about")) {
   await save("pilot.gif", make(PILOT.FRAMES, pilotFrame), { scale: 3, delay: PILOT.DELAY, look: [0, 20, 50] });
 }
 if (want("skills")) {
-  await save("skills.png", [skillsFrame(0, true)], { scale: 2, delay: 0 });
+  await save("skills.png", [skillsFrame()], { scale: 2, delay: 0 });
 }
 if (want("missions")) {
   for (const project of PROJECTS) {
