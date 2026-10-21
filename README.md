@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./pixel-header.gif" alt="Bryan Rumuy, web developer dan AI automation. Layar judul bergaya game pixel: seorang ninja berlari di desa saat senja, melompati pagar dan mengumpulkan koin" width="100%" />
+  <img src="./mecha-header.gif" alt="Bryan Rumuy, web developer dan AI automation. Layar judul bergaya game pixel: sebuah mecha putih-biru-merah melayang di atas kota malam di bawah bulan, mengunci dan menembak jatuh drone, dengan tulisan Bryan Rumuy, Web Developer, AI Automation" width="100%" />
 </p>
 
 <p align="center">
@@ -8,18 +8,17 @@
   Surabaya, Indonesia
 </p>
 
-## Tentang saya
+<p align="center"><img src="./mecha-banner-about.gif" alt="Tentang saya" width="100%" /></p>
 
 Lulusan Teknik Informatika Universitas Surabaya (Data Science dan Artificial Intelligence). Saya membangun sistem web full-stack dan solusi AI untuk kebutuhan bisnis nyata. Terbuka untuk peran Web Developer, Data Scientist, dan AI Automation.
 
-## Skill
+<p align="center"><img src="./mecha-banner-skill.gif" alt="Skill" width="100%" /></p>
 
-- **Web:** PHP, Laravel, JavaScript dan TypeScript, React, Node.js, Tailwind CSS
-- **Database:** MySQL, PostgreSQL (Supabase), SQLite
-- **Data dan AI:** Python, TensorFlow, OpenAI API (function calling, evaluasi)
-- **Tools:** Git, GitHub, CI, pengujian otomatis
+<p align="center">
+  <img src="./mecha-loadout.gif" alt="Web: PHP, Laravel, JavaScript dan TypeScript, React, Node.js, Tailwind CSS. Data: MySQL, PostgreSQL, Supabase, SQLite, Python, TensorFlow. AI dan tools: OpenAI API, aplikasi LLM, prompt, evaluasi, Git dan GitHub, CI dan pengujian otomatis" width="100%" />
+</p>
 
-## Project
+<p align="center"><img src="./mecha-banner-project.gif" alt="Project" width="100%" /></p>
 
 - **HanziLearn** (freelance): aplikasi manajemen les Mandarin untuk guru dan murid, dengan jadwal, PR, tagihan, latihan kosakata HSK, dan notifikasi push. React, Supabase, Cloudflare. Repo privat.
 - **Sistem Keuangan Kantor** (freelance): pencatatan keuangan kantor dengan persetujuan transaksi, 2FA, laporan PDF dan Excel, dan 840+ tes otomatis. Laravel, MySQL. Repo privat.
@@ -30,4 +29,8 @@ Lulusan Teknik Informatika Universitas Surabaya (Data Science dan Artificial Int
 
 Detail dan tangkapan layar ada di [portofolio](https://bryanrumuy-porto.vercel.app/projects).
 
-<sub>Gambar pixel art: paket "Pixel Platformer" dan "Tiny Town" karya [Kenney](https://kenney.nl), lisensi CC0. Ninja, gerbang, dan lentera saya gambar sendiri lewat kode.</sub>
+<p align="center">
+  <img src="./mecha-footer.gif" alt="Terima kasih sudah mampir. Mecha pixel berdiri di bukit saat matahari terbenam, burung terbang melintas, tulisan Mission Complete" width="100%" />
+</p>
+
+<sub>Seluruh gambar pixel art digambar lewat kode (folder `tools`, jalankan `npm run mecha`). Desain mecha dan drone orisinal, terinspirasi anime robot klasik dan bukan karakter resmi milik siapa pun.</sub>
