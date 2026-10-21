@@ -6,12 +6,12 @@ import { COLOURS, chip, frame, starfield, textW } from "./ui.mjs";
 export const SKILLS = { W: 414 };
 
 const ROWS = [
-  { label: "LANGUAGES", colour: COLOURS.line, items: ["PHP", "JavaScript", "TypeScript", "Python", "SQL", "C#"] },
-  { label: "FRAMEWORKS", colour: COLOURS.violet, items: ["Laravel", "React", "Node.js", "Flask", "Tailwind CSS", "Bootstrap"] },
-  { label: "DATABASES", colour: COLOURS.gold, items: ["MySQL", "PostgreSQL", "SQLite", "Supabase"] },
+  { label: "LANGUAGES", colour: COLOURS.line, items: ["PHP", "JavaScript", "TypeScript*", "Python", "SQL", "C#"] },
+  { label: "FRAMEWORKS", colour: COLOURS.violet, items: ["Laravel", "React*", "Node.js", "Flask", "Tailwind CSS*", "Bootstrap"] },
+  { label: "DATABASES", colour: COLOURS.gold, items: ["MySQL", "Supabase*"] },
   { label: "DATA & ML", colour: COLOURS.pink, items: ["TensorFlow", "Keras", "Pandas", "NumPy", "Deep Learning", "Transfer Learning", "Ensemble Learning"] },
-  { label: "AI & LLM", colour: COLOURS.line, items: ["Claude", "OpenAI API", "Function Calling", "Prompt Engineering", "Conversational Agents", "Workflow Automation", "LLM Evaluation", "Telegram Bot API"] },
-  { label: "TOOLS", colour: COLOURS.violet, items: ["Git & GitHub", "CI & Automated Testing", "RBAC & 2FA", "Row Level Security", "Cloudflare", "PWA & Web Push", "AI-Assisted Development", "Microsoft Office"] },
+  { label: "AI & LLM", colour: COLOURS.line, items: ["Claude", "OpenAI API", "Function Calling", "Prompt Engineering", "Conversational Agents", "Workflow Automation", "LLM Evaluation"] },
+  { label: "TOOLS", colour: COLOURS.violet, items: ["Git & GitHub", "CI & Automated Testing", "RBAC & 2FA", "Row Level Security*", "Cloudflare*", "PWA & Web Push*", "AI-Assisted Development"] },
 ];
 
 const LEFT = 74;
@@ -35,7 +35,7 @@ function layout(items) {
 }
 
 const LAID_OUT = ROWS.map((row) => ({ ...row, ...layout(row.items) }));
-export const SKILLS_HEIGHT = 8 + LAID_OUT.reduce((n, row) => n + row.lines * LINE + 4, 0);
+export const SKILLS_HEIGHT = 8 + LAID_OUT.reduce((n, row) => n + row.lines * LINE + 4, 0) + 11;
 
 /** A still picture: the loadout does not move, so it stays easy to read. */
 export function skillsFrame() {
@@ -49,5 +49,6 @@ export function skillsFrame() {
     for (const { item, x, line } of row.placed) chip(fb, x, y + line * LINE, item.toUpperCase(), row.colour);
     y += row.lines * LINE + 4;
   }
+  fb.text("* BUILT WITH AI ASSISTANCE", 12, y + 1, COLOURS.dim);
   return fb;
 }
