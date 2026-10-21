@@ -16,7 +16,7 @@
 
 <p align="center"><img src="./art/banner-loadout.png" alt="Loadout" width="100%" /></p>
 
-<p align="center"><img src="./art/skills.png" alt="Languages: PHP, JavaScript, TypeScript*, Python, SQL, C#. Frameworks: Laravel, React*, Node.js, Flask, Tailwind CSS*, Bootstrap. Databases: MySQL, Supabase*. Data and ML: TensorFlow, Keras, Pandas, NumPy, Deep Learning, Transfer Learning, Ensemble Learning. AI and LLM: Claude, OpenAI API, Function Calling, Prompt Engineering, Conversational Agents, Workflow Automation, LLM Evaluation. Tools: Git and GitHub, CI and Automated Testing, RBAC and 2FA, Row Level Security*, Cloudflare*, PWA and Web Push*, AI-Assisted Development. * Built with AI assistance" width="100%" /></p>
+<p align="center"><img src="./art/skills.png" alt="Languages: PHP, JavaScript, Python, SQL. Frameworks: Laravel, React*, Bootstrap. Databases: MySQL, Supabase*. Data and ML: TensorFlow, Keras, Pandas, NumPy, Deep Learning. AI and LLM: Claude, OpenAI API, Function Calling, Prompt Engineering. Tools: Git and GitHub, CI and Automated Testing, AI-Assisted Development. * Built with AI assistance" width="100%" /></p>
 
 <p align="center"><img src="./art/banner-missions.png" alt="Missions" width="100%" /></p>
 

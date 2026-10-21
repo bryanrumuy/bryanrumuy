@@ -6,12 +6,12 @@ import { COLOURS, chip, frame, starfield, textW } from "./ui.mjs";
 export const SKILLS = { W: 414 };
 
 const ROWS = [
-  { label: "LANGUAGES", colour: COLOURS.line, items: ["PHP", "JavaScript", "TypeScript*", "Python", "SQL", "C#"] },
-  { label: "FRAMEWORKS", colour: COLOURS.violet, items: ["Laravel", "React*", "Node.js", "Flask", "Tailwind CSS*", "Bootstrap"] },
+  { label: "LANGUAGES", colour: COLOURS.line, items: ["PHP", "JavaScript", "Python", "SQL"] },
+  { label: "FRAMEWORKS", colour: COLOURS.violet, items: ["Laravel", "React*", "Bootstrap"] },
   { label: "DATABASES", colour: COLOURS.gold, items: ["MySQL", "Supabase*"] },
-  { label: "DATA & ML", colour: COLOURS.pink, items: ["TensorFlow", "Keras", "Pandas", "NumPy", "Deep Learning", "Transfer Learning", "Ensemble Learning"] },
-  { label: "AI & LLM", colour: COLOURS.line, items: ["Claude", "OpenAI API", "Function Calling", "Prompt Engineering", "Conversational Agents", "Workflow Automation", "LLM Evaluation"] },
-  { label: "TOOLS", colour: COLOURS.violet, items: ["Git & GitHub", "CI & Automated Testing", "RBAC & 2FA", "Row Level Security*", "Cloudflare*", "PWA & Web Push*", "AI-Assisted Development"] },
+  { label: "DATA & ML", colour: COLOURS.pink, items: ["TensorFlow", "Keras", "Pandas", "NumPy", "Deep Learning"] },
+  { label: "AI & LLM", colour: COLOURS.line, items: ["Claude", "OpenAI API", "Function Calling", "Prompt Engineering"] },
+  { label: "TOOLS", colour: COLOURS.violet, items: ["Git & GitHub", "CI & Automated Testing", "AI-Assisted Development"] },
 ];
 
 const LEFT = 74;
