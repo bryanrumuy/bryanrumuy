@@ -56,11 +56,11 @@ export function chip(fb, x, y, text, colour, shine = -1) {
 
 export const BANNER = { W: 276, H: 14, FRAMES: 30, DELAY: 80 };
 
-export function bannerFrame(label, f) {
+export function bannerFrame(label, f, still = false) {
   const fb = new FB(BANNER.W, BANNER.H, COLOURS.bg);
   fb.rect(0, BANNER.H - 2, BANNER.W, 1, COLOURS.line, 0.35);
   // Blinking diamond and the label
-  const on = Math.floor(f / 5) % 2 === 0;
+  const on = still || Math.floor(f / 5) % 2 === 0;
   const dia = on ? COLOURS.gold : "#8a6f1f";
   for (const [dx, dy] of [[3, 0], [2, 1], [3, 1], [4, 1], [1, 2], [2, 2], [3, 2], [4, 2], [5, 2], [2, 3], [3, 3], [4, 3], [3, 4]]) fb.px(4 + dx, 3 + dy, dia);
   fb.text(label, 16, 3, COLOURS.gold, { shadow: "#050824" });
@@ -68,9 +68,11 @@ export function bannerFrame(label, f) {
   const start = 16 + textW(label) + 8;
   const span = BANNER.W - start;
   const x = start + ((f * span) / BANNER.FRAMES);
-  fb.rect(start, 6, span, 1, COLOURS.line, 0.25);
-  fb.rect(x, 5, 10, 3, "#ffffff", 0.9);
-  fb.rect(x - 14, 6, 14, 1, COLOURS.line, 0.8);
+  fb.rect(start, 6, span, 1, COLOURS.line, 0.35);
+  if (!still) {
+    fb.rect(x, 5, 10, 3, "#ffffff", 0.9);
+    fb.rect(x - 14, 6, 14, 1, COLOURS.line, 0.8);
+  }
   return fb;
 }
 
@@ -85,7 +87,7 @@ const BUTTON_ICONS = {
   mail: ["#######", "##...##", "#.#.#.#", "#..#..#", "#.....#", "#.....#", "#######"],
 };
 
-export function buttonFrame(label, icon, colour, f) {
+export function buttonFrame(label, icon, colour, f, still = false) {
   const fb = new FB(BUTTON.W, BUTTON.H, "#0d1233");
   fb.rect(0, 0, BUTTON.W, BUTTON.H, colour, 0.18);
   fb.rect(1, 1, BUTTON.W - 2, 1, colour);
@@ -95,9 +97,9 @@ export function buttonFrame(label, icon, colour, f) {
   fb.blit(BUTTON_ICONS[icon], { "#": colour }, 5, 4);
   fb.text(label, 16, 4, "#ffffff", { shadow: "#050824" });
   // The arrow nudges to the right, and a shine crosses the button
-  const nudge = Math.floor(f / 4) % 3;
+  const nudge = still ? 0 : Math.floor(f / 4) % 3;
   fb.text(">", BUTTON.W - 11 + nudge, 4, COLOURS.gold);
   const x = ((f * (BUTTON.W + 16)) / BUTTON.FRAMES) - 8;
-  for (let y = 2; y < BUTTON.H - 2; y += 1) fb.px(x + (BUTTON.H - y) / 3, y, "#ffffff", 0.3);
+  if (!still) for (let y = 2; y < BUTTON.H - 2; y += 1) fb.px(x + (BUTTON.H - y) / 3, y, "#ffffff", 0.3);
   return fb;
 }

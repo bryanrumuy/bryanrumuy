@@ -131,9 +131,9 @@ export const PROJECTS = [
   { id: "herbalscan", icon: "leaf", colour: COLOURS.green, tag: "THESIS", title: "HERBALSCAN", sub: "LEAF SCANNER", stack: ["PYTHON", "KERAS", "FLASK"], visibility: "PRIVATE" },
 ];
 
-export function cardFrame(project, f) {
+export function cardFrame(project, f, still = false) {
   const fb = new FB(CARD.W, CARD.H, COLOURS.bg);
-  const pulse = 0.55 + 0.45 * Math.sin((2 * Math.PI * f) / CARD.FRAMES);
+  const pulse = still ? 1 : 0.55 + 0.45 * Math.sin((2 * Math.PI * f) / CARD.FRAMES);
   // Header strip with the type tag and the repo badge
   fb.rect(0, 0, CARD.W, 11, project.colour, 0.22);
   fb.text(project.tag, 5, 2, project.colour);
@@ -141,14 +141,14 @@ export function cardFrame(project, f) {
   fb.text(badge, CARD.W - 5 - textW(badge), 2, COLOURS.dim);
   frame(fb, project.colour, 0.55 + 0.45 * pulse);
   // Icon in a small socket, bobbing
-  const bob = Math.round(Math.sin((2 * Math.PI * f) / CARD.FRAMES));
+  const bob = still ? 0 : Math.round(Math.sin((2 * Math.PI * f) / CARD.FRAMES));
   fb.rect(5, 14, 34, 34, "#0a0f2e");
   fb.rect(5, 14, 34, 1, project.colour, 0.5);
   fb.rect(5, 47, 34, 1, project.colour, 0.5);
   fb.rect(5, 14, 1, 34, project.colour, 0.25);
   fb.rect(38, 14, 1, 34, project.colour, 0.25);
   fb.blit(ICONS[project.icon], P, 6, 15 + bob, { scale: 2 });
-  if (f % 12 < 2) {
+  if (!still && f % 12 < 2) {
     fb.px(35, 18 + bob, "#ffffff");
     fb.px(34, 19 + bob, "#ffffff", 0.6);
     fb.px(36, 19 + bob, "#ffffff", 0.6);
@@ -160,11 +160,11 @@ export function cardFrame(project, f) {
   // Stack chips
   let x = 6;
   project.stack.forEach((item, i) => {
-    const w = chip(fb, x, 54, item, project.colour, ((f / CARD.FRAMES) * 3.2 - i * 0.9));
+    const w = chip(fb, x, 54, item, project.colour, still ? -1 : (f / CARD.FRAMES) * 3.2 - i * 0.9);
     x += w + 3;
   });
   // Call to action
-  const nudge = Math.floor(f / 6) % 2;
+  const nudge = still ? 0 : Math.floor(f / 6) % 2;
   const cta = project.visibility === "PUBLIC" ? "CODE ON GITHUB" : "SEE PORTFOLIO";
   fb.text(cta, 6, 67, COLOURS.text);
   fb.text(">", 6 + textW(cta) + 4 + nudge, 67, COLOURS.gold);

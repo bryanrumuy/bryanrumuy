@@ -10,13 +10,13 @@ const ROWS = [
   { label: "FRAMEWORKS", colour: COLOURS.gold, items: ["LARAVEL", "REACT", "NODE.JS", "FLASK", "TAILWIND", "BOOTSTRAP"] },
   { label: "DATABASES", colour: COLOURS.green, items: ["MYSQL", "POSTGRESQL", "SQLITE", "SUPABASE"] },
   { label: "DATA + ML", colour: COLOURS.pink, items: ["TENSORFLOW", "KERAS", "PANDAS", "NUMPY", "DEEP LEARNING"] },
-  { label: "AI + LLM", colour: COLOURS.orange, items: ["OPENAI API", "FUNCTION CALLING", "PROMPTING", "LLM EVALS"] },
+  { label: "AI + LLM", colour: COLOURS.orange, items: ["CLAUDE", "OPENAI API", "FUNCTION CALLING", "PROMPTING", "EVALS"] },
   { label: "TOOLS", colour: COLOURS.violet, items: ["GIT + GITHUB", "CI + TESTING", "RBAC + 2FA", "CLOUDFLARE", "PWA"] },
 ];
 
-export function skillsFrame(f) {
+export function skillsFrame(f, still = false) {
   const fb = new FB(SKILLS.W, SKILLS.H, COLOURS.bg);
-  starfield(fb, f, 12, 60);
+  starfield(fb, still ? 0 : f, 12, 60, 1e9);
   frame(fb);
   ROWS.forEach((row, i) => {
     const y = 6 + i * 13;
@@ -26,7 +26,7 @@ export function skillsFrame(f) {
     const sweep = ((f - i * 5 + SKILLS.FRAMES * 2) % SKILLS.FRAMES) / 14; // 0..~3.4 chips per cycle
     let x = 74;
     row.items.forEach((item, k) => {
-      const w = chip(fb, x, y, item, row.colour, sweep - k * 0.55);
+      const w = chip(fb, x, y, item, row.colour, still ? -1 : sweep - k * 0.55);
       x += w + 4;
     });
   });

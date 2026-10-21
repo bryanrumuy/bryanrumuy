@@ -35,7 +35,7 @@ export function footerFrame(f) {
     for (let x = 0; x < W; x += 1) fb.px(x, y, edge <= 2 && (x + y) % (edge === 1 ? 2 : 4) === 0 ? next : FOOTER_BANDS[i][1]);
   }
   const star = rng(21);
-  for (let i = 0; i < 18; i += 1) fb.px(Math.floor(star() * W), Math.floor(star() * 20), "#ffffff", 0.25 + 0.6 * (0.5 + 0.5 * Math.sin(f / 4 + i)));
+  for (let i = 0; i < 18; i += 1) fb.px(Math.floor(star() * W), Math.floor(star() * 20), "#ffffff", 0.55);
   // The sun and its pulsing glow
   const pulse = Math.round(Math.sin((2 * Math.PI * f) / FOOTER.FRAMES) * 2);
   fb.disc(56, 50, 22 + pulse, "#ffe9a8", 0, 0.14);
@@ -43,7 +43,7 @@ export function footerFrame(f) {
   fb.disc(56, 50, 12, "#fffbe8");
   // Clouds drift with a gentle sway
   for (const [cx, cy, w] of [[20, 20, 22], [98, 12, 28], [160, 24, 20]]) {
-    const sway = Math.round(Math.sin((2 * Math.PI * f) / FOOTER.FRAMES + cx) * 2);
+    const sway = 0;
     fb.rect(cx + sway, cy, w, 3, "#ffc0cf", 0.8);
     fb.rect(cx + 3 + sway, cy - 2, w - 8, 3, "#ffc0cf", 0.8);
   }
@@ -56,7 +56,7 @@ export function footerFrame(f) {
   bird(fb, bx + 12, 24, f + 1);
   bird(fb, bx + 24, 16, f);
   // The suit at ease on the hill, bobbing slightly
-  const bob = Math.round(Math.sin((2 * Math.PI * f) / FOOTER.FRAMES));
+  const bob = 0;
   const x = 150;
   const y = 14 + bob;
   fb.blit(SUIT.body, PALETTE, x, y);
@@ -68,6 +68,6 @@ export function footerFrame(f) {
   // Text
   fb.text("THANKS FOR", 4, 5, (col, row) => (row < 4 ? "#fff4c4" : "#ffd24a"), { size: 2, shadow: "#3a1d57" });
   fb.text("VISITING", 4, 22, (col, row) => (row < 4 ? "#fff4c4" : "#ffd24a"), { size: 2, shadow: "#3a1d57" });
-  if (f % 16 < 11) fb.text("MISSION COMPLETE", 4, 41, "#58ffa6", { shadow: "#10331f" });
+  fb.text("MISSION COMPLETE", 4, 41, "#58ffa6", { shadow: "#10331f" });
   return fb;
 }

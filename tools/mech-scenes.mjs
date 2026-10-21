@@ -22,7 +22,8 @@ const make = (n, fn) => Array.from({ length: n }, (_, f) => fn(f));
 async function save(name, frames, { scale, delay, colours = 64, look = [] }) {
   const pngs = [];
   for (const fb of frames) pngs.push(await fb.png(scale));
-  const buffer = await gif(pngs, delay, colours);
+  const still = frames.length === 1;
+  const buffer = still ? pngs[0] : await gif(pngs, delay, colours);
   fs.writeFileSync(path.join(root, "art", name), buffer);
   console.log(name, `${(buffer.length / 1024).toFixed(0)} KB`, `${frames.length} frames`);
   if (preview) for (const i of look) fs.writeFileSync(path.join(preview, `${name}-${i}.png`), pngs[i]);
@@ -38,23 +39,23 @@ if (want("about")) {
   await save("pilot.gif", make(PILOT.FRAMES, pilotFrame), { scale: 3, delay: PILOT.DELAY, look: [0, 20, 50] });
 }
 if (want("skills")) {
-  await save("skills.gif", make(SKILLS.FRAMES, skillsFrame), { scale: 2, delay: SKILLS.DELAY, look: [0, 14] });
+  await save("skills.png", [skillsFrame(0, true)], { scale: 2, delay: 0 });
 }
 if (want("missions")) {
   for (const project of PROJECTS) {
-    await save(`mission-${project.id}.gif`, make(CARD.FRAMES, (f) => cardFrame(project, f)), { scale: 3, delay: CARD.DELAY, colours: 128, look: [0, 8] });
+    await save(`mission-${project.id}.png`, [cardFrame(project, 0, true)], { scale: 3, delay: 0 });
   }
 }
 if (want("chrome")) {
   for (const [file, label] of [["pilot", "PILOT PROFILE"], ["loadout", "LOADOUT"], ["missions", "MISSIONS"]]) {
-    await save(`banner-${file}.gif`, make(BANNER.FRAMES, (f) => bannerFrame(label, f)), { scale: 3, delay: BANNER.DELAY, colours: 32, look: [8] });
+    await save(`banner-${file}.png`, [bannerFrame(label, 0, true)], { scale: 3, delay: 0 });
   }
   for (const [file, label, icon, colour] of [
     ["portfolio", "PORTFOLIO", "globe", COLOURS.gold],
     ["linkedin", "LINKEDIN", "link", COLOURS.line],
     ["email", "EMAIL", "mail", COLOURS.pink],
   ]) {
-    await save(`button-${file}.gif`, make(BUTTON.FRAMES, (f) => buttonFrame(label, icon, colour, f)), { scale: 3, delay: BUTTON.DELAY, colours: 32, look: [6] });
+    await save(`button-${file}.png`, [buttonFrame(label, icon, colour, 0, true)], { scale: 3, delay: 0 });
   }
 }
 if (want("footer")) {
