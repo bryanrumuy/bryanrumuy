@@ -1,36 +1,60 @@
 <p align="center">
-  <img src="./mecha-header.gif" alt="Bryan Rumuy, web developer dan AI automation. Layar judul bergaya game pixel: sebuah mecha putih-biru-merah melayang di atas kota malam di bawah bulan, mengunci dan menembak jatuh drone, dengan tulisan Bryan Rumuy, Web Developer, AI Automation" width="100%" />
+  <img src="./art/header.gif" alt="Bryan Rumuy, web developer and AI automation. A pixel-art title screen: a white, blue and red mecha hovers over a night city under the moon, locks on to drones and shoots them down" width="100%" />
 </p>
 
 <p align="center">
-  <a href="https://bryanrumuy-porto.vercel.app/">Portofolio</a> &nbsp;|&nbsp;
-  <a href="https://www.linkedin.com/in/bryanrumuy">LinkedIn</a> &nbsp;|&nbsp;
-  Surabaya, Indonesia
+  <a href="https://bryanrumuy-porto.vercel.app/"><img src="./art/button-portfolio.gif" alt="Portfolio" /></a>
+  <a href="https://www.linkedin.com/in/bryanrumuy"><img src="./art/button-linkedin.gif" alt="LinkedIn" /></a>
+  <a href="mailto:rumuybryan@gmail.com"><img src="./art/button-email.gif" alt="Email" /></a>
 </p>
 
-<p align="center"><img src="./mecha-banner-about.gif" alt="Tentang saya" width="100%" /></p>
+<p align="center"><img src="./art/banner-pilot.gif" alt="Pilot profile" width="100%" /></p>
 
-Lulusan Teknik Informatika Universitas Surabaya (Data Science dan Artificial Intelligence). Saya membangun sistem web full-stack dan solusi AI untuk kebutuhan bisnis nyata. Terbuka untuk peran Web Developer, Data Scientist, dan AI Automation.
+<p align="center"><img src="./art/pilot.gif" alt="Pilot data. Name: Bryan Rumuy. Role: web developer. Focus: AI automation. Base: Surabaya, Indonesia. School: Universitas Surabaya. Status: open to work" width="100%" /></p>
 
-<p align="center"><img src="./mecha-banner-skill.gif" alt="Skill" width="100%" /></p>
+<p align="center"><i>I build web systems and AI automation that solve real business problems.</i></p>
+
+<p align="center"><img src="./art/banner-loadout.gif" alt="Loadout" width="100%" /></p>
+
+<p align="center"><img src="./art/skills.gif" alt="Languages: PHP, JavaScript, TypeScript, Python, SQL, C#. Frameworks: Laravel, React, Node.js, Flask, Tailwind CSS, Bootstrap. Databases: MySQL, PostgreSQL, SQLite, Supabase. Data and ML: TensorFlow, Keras, Pandas, NumPy, deep learning. AI and LLM: OpenAI API, function calling, prompting, LLM evaluation. Tools: Git and GitHub, CI and testing, RBAC and 2FA, Cloudflare, PWA" width="100%" /></p>
+
+<p align="center"><img src="./art/banner-missions.gif" alt="Missions" width="100%" /></p>
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://bryanrumuy-porto.vercel.app/projects"><img src="./art/mission-hanzilearn.gif" alt="HanziLearn, freelance tutoring app, React, Supabase, PWA, private repository" width="100%" /></a><br />
+      <sub>A tutoring app for a private Mandarin teacher: lessons, homework, invoices, HSK practice and push notifications.</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://bryanrumuy-porto.vercel.app/projects"><img src="./art/mission-finance.gif" alt="Office Finance, freelance finance system, Laravel, MySQL, 2FA, private repository" width="100%" /></a><br />
+      <sub>Office bookkeeping with approvals, two-factor login, PDF and Excel reports, and 840+ automated tests.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://bryanrumuy-porto.vercel.app/projects"><img src="./art/mission-flbeauty.gif" alt="FL Beauty, campus internship, sales and stock system, PHP, MySQL" width="100%" /></a><br />
+      <sub>Sales, purchasing and batch-level stock with expiry dates for a skincare shop, built in a campus internship.</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://github.com/bryanrumuy/alter-ai-assistant"><img src="./art/mission-alter.gif" alt="Alter, personal proof of concept, AI assistant, Node.js, OpenAI, public repository" width="100%" /></a><br />
+      <sub>An AI customer-service assistant that takes orders with function calling and hands complaints to staff. Demo with a fictional cafe.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://github.com/bryanrumuy/blockchain-wfh-monitoring"><img src="./art/mission-blockchain.gif" alt="WFH Blockchain, course project, Hyperledger Fabric, Node.js, PHP, public repository" width="100%" /></a><br />
+      <sub>Work-from-home activity records on a Hyperledger Fabric ledger. A group course project.</sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://bryanrumuy-porto.vercel.app/projects"><img src="./art/mission-herbalscan.gif" alt="HerbalScan, thesis, leaf scanner, Python, Keras, Flask" width="100%" /></a><br />
+      <sub>Identifies 10 Indonesian medicinal plants from a leaf photo using 15 voting models (99.34% test accuracy).</sub>
+    </td>
+  </tr>
+</table>
 
 <p align="center">
-  <img src="./mecha-loadout.gif" alt="Web: PHP, Laravel, JavaScript dan TypeScript, React, Node.js, Tailwind CSS. Data: MySQL, PostgreSQL, Supabase, SQLite, Python, TensorFlow. AI dan tools: OpenAI API, aplikasi LLM, prompt, evaluasi, Git dan GitHub, CI dan pengujian otomatis" width="100%" />
+  <img src="./art/footer.gif" alt="Thanks for visiting. Mission complete. A pixel-art mecha stands on a hill at sunset while birds fly past" width="100%" />
 </p>
 
-<p align="center"><img src="./mecha-banner-project.gif" alt="Project" width="100%" /></p>
-
-- **HanziLearn** (freelance): aplikasi manajemen les Mandarin untuk guru dan murid, dengan jadwal, PR, tagihan, latihan kosakata HSK, dan notifikasi push. React, Supabase, Cloudflare. Repo privat.
-- **Sistem Keuangan Kantor** (freelance): pencatatan keuangan kantor dengan persetujuan transaksi, 2FA, laporan PDF dan Excel, dan 840+ tes otomatis. Laravel, MySQL. Repo privat.
-- **FL Beauty** (kerja praktik kampus): sistem penjualan, pembelian, dan stok per batch kedaluwarsa untuk toko skincare. PHP, MySQL.
-- **[Alter](https://github.com/bryanrumuy/alter-ai-assistant)**: asisten layanan pelanggan berbasis AI, proof of concept dengan kafe fiktif. Node.js, OpenAI API.
-- **[Blockchain WFH Monitoring](https://github.com/bryanrumuy/blockchain-wfh-monitoring)**: proyek kuliah kelompok dengan Hyperledger Fabric.
-- **HerbalScan** (skripsi): pengenal 10 tanaman obat dari foto daun, 15 model suara bersama, akurasi 99,34% pada pengujian.
-
-Detail dan tangkapan layar ada di [portofolio](https://bryanrumuy-porto.vercel.app/projects).
-
-<p align="center">
-  <img src="./mecha-footer.gif" alt="Terima kasih sudah mampir. Mecha pixel berdiri di bukit saat matahari terbenam, burung terbang melintas, tulisan Mission Complete" width="100%" />
-</p>
-
-<sub>Seluruh gambar pixel art digambar lewat kode (folder `tools`, jalankan `npm run mecha`). Desain mecha dan drone orisinal, terinspirasi anime robot klasik dan bukan karakter resmi milik siapa pun.</sub>
+<sub>All pixel art is drawn in code (see `tools`, run `npm run mecha`). The mecha and drone designs are original, inspired by classic giant-robot anime and not any official character.</sub>

@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Artwork build scripts for the GitHub profile README",
   "scripts": {
-    "scene": "node tools/scene.mjs",
     "mecha": "node tools/mech-scenes.mjs"
   },
   "repository": {

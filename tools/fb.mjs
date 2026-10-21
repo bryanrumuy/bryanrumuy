@@ -66,13 +66,15 @@ export class FB {
   }
 
   /** A picture given as rows of characters plus a palette; "." is transparent. */
-  blit(rows, palette, x, y, { flip = false, alpha = 1 } = {}) {
+  blit(rows, palette, x, y, { flip = false, alpha = 1, scale = 1 } = {}) {
     rows.forEach((row, r) => {
       const chars = [...row];
       chars.forEach((ch, c) => {
         const colour = palette[ch];
         if (!colour) return;
-        this.px(x + (flip ? chars.length - 1 - c : c), y + r, colour, alpha);
+        const cx = x + (flip ? chars.length - 1 - c : c) * scale;
+        if (scale === 1) this.px(cx, y + r, colour, alpha);
+        else this.rect(cx, y + r * scale, scale, scale, colour, alpha);
       });
     });
   }
